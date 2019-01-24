@@ -1,3 +1,7 @@
+@import '404.css';
+
+
+
 body {
   font-family: 'Lato', sans-serif;
   color: white;
@@ -29,9 +33,11 @@ body {
 }
 
 .navbar {
+  top: 0;
+  left: 0;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 5;
 }
 
 .bg-white {
@@ -141,7 +147,7 @@ h4 {
 
 #blogheadline {
   padding-top: 400px;
-  text-align: center;  
+  text-align: center;
   text-shadow: 2px 2px black;
 }
 
@@ -293,3 +299,5 @@ h4 {
 .footer img {
   text-align: center;
 }
+
+/* #genresume { background-color: #5fff2b !important; }
