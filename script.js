@@ -5,9 +5,20 @@
         document.getElementById('urch').split()[i].style.color = "#FF6F61";
       }}}; */
 
+
+
   window.addEventListener("scroll", function() {
-    if (pageYOffset > 200) {
-   document.getElementById("hiya").classList.remove('bg-transparent');
+    if (pageYOffset > 300) {
+      document.getElementById("mainheadline").classList.add('ghost');
+    } else {
+      document.getElementById("mainheadline").classList.remove('ghost');
+}
+});
+
+
+
+
+/*   document.getElementById("hiya").classList.remove('bg-transparent');
    document.getElementById("hiya").classList.remove('navbar-dark');
    document.getElementById("hiya").classList.add('bg-light');
    document.getElementById("hiya").classList.add('navbar-light');
@@ -22,9 +33,9 @@
    document.getElementById("paypal").classList.remove('paypal-invert');
    document.getElementById("paypal").classList.add('paypal');
       $('.navbar-brand img').attr('src','https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2FNayaca%20Logo.003.png?1546601524771');
-          }
+     }
   });
-
+*/
 
 /*
 $(window).scroll(function() {
