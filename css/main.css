@@ -1,6 +1,29 @@
 @import '404.css';
 
+/* NEWLY INTRODUCED BUTTON BTN-PANTONE!!! */
 
+      .btn-pantone {
+        color: #fff;
+        background-color: #FF6F61;
+        border-color: #fff; }
+        .btn-pantone:hover {
+          color: #FF6F61;
+          background-color: #fff;
+          border-color: #FF6F61; }
+        .btn-pantone:focus, .btn-pantone.focus {
+          box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
+        .btn-pantone.disabled, .btn-pantone:disabled {
+          color: #fff;
+          background-color: #dc3545;
+          border-color: #dc3545; }
+        .btn-pantone:not(:disabled):not(.disabled):active, .btn-pantone:not(:disabled):not(.disabled).active,
+        .show > .btn-dpantone.dropdown-toggle {
+          color: #fff;
+          background-color: #bd2130;
+          border-color: #b21f2d; }
+          .btn-pantone:not(:disabled):not(.disabled):active:focus, .btn-pantone:not(:disabled):not(.disabled).active:focus,
+          .show > .btn-pantone.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -9,13 +32,23 @@ body {
   font-weight: bold;
 }
 
+h7 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.jumbotron {
+    border-radius: 0 !important;
+    margin-bottom: 0;
+}
+
 #main{
   max-width: 100%;
-  min-height: 1000px;
-  background: -webkit-gradient(linear, left center, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url('https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Fchelsea-london-phillips-779135-unsplash.jpg?1544697182195') no-repeat;
+  background: -webkit-gradient(linear, left center, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))),
+  url('https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Fchelsea-london-phillips-779135-unsplash.jpg?1544697182195') no-repeat;
   /*background-image: url("https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Fchelsea-london-phillips-779135-unsplash.jpg?1544697182195");*/
   background-size: cover;
-  background-position: 0% 30%;
+  background-position: 0% 40%;
   display: block;
   background-repeat: no-repeat;
   color: white;
@@ -135,13 +168,14 @@ h4 {
 
 #mainheadline {
   padding-top: 400px;
-  padding-bottom: 200px;
+/*  padding-bottom: 200px; */
   text-align: center;
   text-shadow: 2px 2px black;
 }
 
 @media (max-width: 575.98px) {
 #mainheadline {
+  font-size: 10rem;
   padding-top: 250px;
 }}
 
@@ -152,8 +186,8 @@ h4 {
 }
 
 .efs {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-top: -top: 50px;
+  margin-bottom: 50px;
   text-align: center;
   letter-spacing: 0.1rem;
   word-spacing: 0.25rem;
@@ -171,6 +205,25 @@ h4 {
 /*
 .col-sm {
      text-align: center;
+} */
+
+.gotoresume {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.25rem;
+  font-weight: bold;
+  color: white;
+  margin: 100px auto 200px auto;
+}
+
+#urch {
+  letter-spacing: 0.1rem;
+  word-spacing: 0.25rem;
+  font-weight: bold;
+}
+
+/* #resume-icon {
+  padding-bottom: 50px;
 } */
 
 .resumesheadline {
@@ -239,17 +292,16 @@ h4 {
 }
 
 #resumes {
-  padding-top: 100px;
-  margin-top: -100px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  margin-top: -50px;
   color: white;
   text-align: center;
 }
 
-#resume-image {
+/* #resume-image {
   margin-top: 50px;
   margin-bottom: 50px;
-}
+} */
 
 .resumes h4 {
   padding: 20px 0px;
@@ -273,7 +325,7 @@ h4 {
 }
 
 
-.footer .col-sm {
+.col .footer {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -281,6 +333,12 @@ h4 {
 
 .footer {
   background-color: black;
+  margin-top: 0;
+  text-align: center;
+}
+
+.footerbox {
+  margin: auto auto 10px auto;
 }
 
 .footer p {
@@ -300,4 +358,8 @@ h4 {
   text-align: center;
 }
 
-/* #genresume { background-color: #5fff2b !important; }
+/* #genresume { background-color: #5fff2b !important; } */
+
+#resumenav {
+  color: black;
+}
