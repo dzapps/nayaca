@@ -4,13 +4,118 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="/assets/media/shortcutIcon.ico">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/resume.css">
     <title>Nayaca</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./app.js" defer></script>
   </head>
-
   <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-expand-sm navbar-light bg-transparent" id="resumenav">
+          <a class="navbar-brand" href="index.html"><img src="assets/media/nayaca-pantone-logo.png" alt="Nayaca"></a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sections</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#"><img src="assets/media/usa-logo.png" height="16" width="35" alt="Usa flag">English</a>
+                  <a class="dropdown-item" href="#"><img src="assets/media/germany-logo.png" height="16" width="35" alt="Germany flag">Deutsch</a>
+                  <a class="dropdown-item" href="#"><img src="assets/media/mexico-logo.png" height="16" width="35" alt="Mexico flag">Español</a>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container" id="app">
+      <div class="row">
+      <div class="col-md-4">
+
+      <div class="About">
+        <label for="name">My name</label><br>
+        <input type="text" value="name" placeholder="Dow Jones" v-model="name" /><br>
+        <label for="current_position">My current position</label><br>
+        <input type="text" value="current_position" placeholder="CEO" v-model="current_position"><br>
+        <label for="current_company">My current company</label><br>
+        <input type="text" value="current_company" placeholder="New York Stock Exchange" v-model="current_company"><br>
+        <label for="current_location">My current location</label><br>
+        <input type="text" value="current_location" placeholder="New York City" v-model="current_location"><br>
+        <label for="about_me">About me</label><br>
+        <input type="text" value="about_me" placeholder="I'm pretty amazing." v-model="about_me"><br>
+        </div>
+
+
+<!-- Bootstrap example classes from here
+
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Example multiple select</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+
+Bootstrap example classes till here -->
+
+      </div>
+        <div class="col-md-8" id="resumepage">
+
+        <h4>{{ name }}</h4>
+        <span class="inliner"><h6>{{ current_position }}</h6>
+          <h6 v-if="current_position">&nbsp; | &nbsp;</h6>
+          <h6>{{ current_company }}</h6><h6 v-if="current_company">&nbsp; | &nbsp;</h6>
+          <h6>{{ current_location }}</h6>
+        </span><br>
+        <span class="inliner">
+          <p class="pantone-headline" v-if="about_me">About &nbsp; &nbsp; &nbsp;</p>
+          <p>{{ about_me }}</p>
+        </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+<input type="text" value="name" placeholder="MY NAME" v-model="name" />
+<input type="text" value="current_position" placeholder="MY CURRENT POSITION" v-model="current_position" />
+<input type="text" value="current_company" placeholder="MY CURRENT COMPANY" v-model="current_company" />
+<input type="text" value="current_location" placeholder="MY CURRENT LOCATION" v-model="current_location" />
+<input type="text" value="about_me" placeholder="ABOUT ME" v-model="about_me" />
 
     <div class="container-fluid">
       <div class="row">
@@ -37,9 +142,15 @@
       </div>
     </div>
 
+    <div id="app">
+      <label for="firstname">First name</label>
+      <input type="text" value="firstname" placeholder="First name" v-model="firstname" />
+      <label for="lastname">Last name</label>
+      <input type="text" value="lastname" placeholder="Last name" v-model="lastname" />
+      <h2>{{ firstname }} {{ lastname }}</h2>
+    </div>
 
-
-      <div class="container">
+  <!--    <div class="container">
 
         <div class="resume-name"><span><h2>{{person.name}}</h2></span>
         </div>
@@ -63,7 +174,4 @@
         </form>
       </div>
     </div>
-
-
-  </body>
-</html>
+ -->
