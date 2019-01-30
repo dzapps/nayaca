@@ -1,3 +1,17 @@
+const app = new Vue({
+  el:'#app',
+  data: {
+    name: '',
+    current_position: '',
+    current_company: '',
+    current_location: '',
+    about_me: ''
+  }
+});
+
+
+/*
+
 const http = require('http');
 const fs = require('fs');
 
@@ -21,4 +35,4 @@ fs.readFile('index.html', (err, html) => {
     console.log('Server started on port '+port)
   });
 
-});
+}); */

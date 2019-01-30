@@ -15,7 +15,7 @@
 }
 });
 
-
+const A4ratio = Math(29.7/21);
 
 
 /*   document.getElementById("hiya").classList.remove('bg-transparent');
