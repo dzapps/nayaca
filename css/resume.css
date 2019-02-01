@@ -113,7 +113,12 @@ h7 {
 
 .pantone-headline {
   color: #FF6F61;
-};
+}
+
+#AboutNavLink, #navlink_2, #navlink_3 {
+  color: black;
+}
+
 
 #main{
   max-width: 100%;

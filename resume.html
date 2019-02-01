@@ -14,14 +14,14 @@
 
     <div class="container-fluid">
       <div class="row">
-        <nav class="navbar navbar-expand-sm navbar-light bg-transparent" id="resumenav">
+        <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
           <a class="navbar-brand" href="index.html"><img src="assets/media/nayaca-pantone-logo.png" alt="Nayaca"></a>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#" id="AboutNavLink">About</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              <a class="nav-link dropdown-toggle" href="#" id="navlink_2" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sections</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#"><img src="assets/media/usa-logo.png" height="16" width="35" alt="Usa flag">English</a>
@@ -30,28 +30,49 @@
                 </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#" id="navlink_3">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </div>
 
+
+
     <div class="container" id="app">
       <div class="row">
       <div class="col-md-4">
 
-      <div class="About">
-        <label for="name">My name</label><br>
-        <input type="text" value="name" placeholder="Dow Jones" v-model="name" /><br>
-        <label for="current_position">My current position</label><br>
-        <input type="text" value="current_position" placeholder="CEO" v-model="current_position"><br>
-        <label for="current_company">My current company</label><br>
-        <input type="text" value="current_company" placeholder="New York Stock Exchange" v-model="current_company"><br>
-        <label for="current_location">My current location</label><br>
-        <input type="text" value="current_location" placeholder="New York City" v-model="current_location"><br>
-        <label for="about_me">About me</label><br>
-        <input type="text" value="about_me" placeholder="I'm pretty amazing." v-model="about_me"><br>
+        <div>
+          <button type="button" class="btn btn-lg btn-pantone" @click="isVisible = !isVisible">ABOUT</button>
+          <div id="about_box" v-show="isVisible">
+            <label for="name">My name</label><br>
+            <input type="text" value="name" placeholder="Dow Jones" v-model="name" /><br>
+            <label for="current_position">My current position</label><br>
+            <input type="text" value="current_position" placeholder="CEO" v-model="current_position"><br>
+            <label for="current_company">My current company</label><br>
+            <input type="text" value="current_company" placeholder="New York Stock Exchange" v-model="current_company"><br>
+            <label for="current_location">My current location</label><br>
+            <input type="text" value="current_location" placeholder="New York City" v-model="current_location"><br>
+            <label for="about_me">About me</label><br>
+            <input type="text" value="about_me" placeholder="I'm pretty amazing." v-model="about_me"><br>
+          </div>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-lg btn-pantone" @click="contact_isVisible  = !contact_isVisible">CONTACT</button>
+          <div id="contact_box" v-show="contact_isVisible">
+            <label for="email">My name</label><br>
+            <input type="text" value="email" placeholder="dowjones@nyse.com" v-model="email" /><br>
+            <label for="phone">My phone number</label><br>
+            <input type="number" value="phone" placeholder="+1 (234) 567890" v-model="phone"><br>
+            <label for="website">My website</label><br>
+            <input type="text" value="website" placeholder="nyse.com" v-model="website"><br>
+            <label for="linkedIn">My linkedIn account</label><br>
+            <input type="text" value="linkedIn" placeholder="linkedIn.com/dowjones" v-model="linkedIn"><br>
+            <label for="about_me">About me</label><br>
+            <input type="text" value="address" placeholder="Wall Street NYC" v-model="address"><br>
+          </div>
         </div>
 
 
