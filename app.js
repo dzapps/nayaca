@@ -5,8 +5,11 @@ const app = new Vue({
     current_position: '',
     current_company: '',
     current_location: '',
-    about_me: ''
-  }
+    about_me: '',
+    isVisible: true,
+    contact_isVisible: false
+  },
+
 });
 
 

@@ -76,6 +76,11 @@ h7 {
     z-index: 5;
 }
 
+
+#navlink_1, #navlink_2, #navlink_3, #navlink_4 {
+  color: white;
+}
+
 .bg-white {
   background-color: white;
   display: cover;

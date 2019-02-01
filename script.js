@@ -15,10 +15,19 @@
 }
 });
 
+/*
+
+getElementById("about").addEventListener("click", function() {
+    document.getElementById("about_box").classList.remove('visible');
+    document.getElementById("about_box").classList.add('invisible');
+  });
+
+
+
 const A4ratio = Math(29.7/21);
 
 
-/*   document.getElementById("hiya").classList.remove('bg-transparent');
+  document.getElementById("hiya").classList.remove('bg-transparent');
    document.getElementById("hiya").classList.remove('navbar-dark');
    document.getElementById("hiya").classList.add('bg-light');
    document.getElementById("hiya").classList.add('navbar-light');
