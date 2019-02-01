@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/assets/media/shortcutIcon.ico">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/css/resume.css">
     <title>Nayaca</title>
@@ -44,7 +45,7 @@
       <div class="col-md-4">
 
         <div>
-          <button type="button" class="btn btn-lg btn-pantone" @click="isVisible = !isVisible">ABOUT</button>
+          <button type="button" class="btn btn-lg btn-pantone" @click="toggle">ABOUT</button>
           <div id="about_box" v-show="isVisible">
             <label for="name">My name</label><br>
             <input type="text" value="name" placeholder="Dow Jones" v-model="name" /><br>
@@ -60,9 +61,9 @@
         </div>
 
         <div>
-          <button type="button" class="btn btn-lg btn-pantone" @click="contact_isVisible  = !contact_isVisible">CONTACT</button>
+          <button type="button" class="btn btn-lg btn-pantone" @click="toggle">CONTACT</button>
           <div id="contact_box" v-show="contact_isVisible">
-            <label for="email">My name</label><br>
+            <label for="email">My email</label><br>
             <input type="text" value="email" placeholder="dowjones@nyse.com" v-model="email" /><br>
             <label for="phone">My phone number</label><br>
             <input type="number" value="phone" placeholder="+1 (234) 567890" v-model="phone"><br>

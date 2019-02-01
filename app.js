@@ -6,9 +6,20 @@ const app = new Vue({
     current_company: '',
     current_location: '',
     about_me: '',
+    email: '',
+    phone: '',
+    website: '',
+    linkedIn: '',
+    address: '',
     isVisible: true,
-    contact_isVisible: false
+    contact_isVisible: false,
   },
+  methods: {
+    toggle: function() {
+       this.isVisible = !this.isVisible,
+       this.contact_isVisible = !this.contact_isVisible
+     }
+  }
 
 });
 
