@@ -1,29 +1,77 @@
 @import '404.css';
 
-/* NEWLY INTRODUCED BUTTON BTN-PANTONE!!! */
+/* NEWLY INTRODUCED BUTTON BTN-PANTONE and BTN-OUTLINE-PANTONE!!! */
 
-      .btn-pantone {
-        color: #fff;
-        background-color: #FF6F61;
-        border-color: #fff; }
-        .btn-pantone:hover {
-          color: #FF6F61;
-          background-color: #fff;
-          border-color: #FF6F61; }
-        .btn-pantone:focus, .btn-pantone.focus {
-          box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
-        .btn-pantone.disabled, .btn-pantone:disabled {
-          color: #fff;
-          background-color: #dc3545;
-          border-color: #dc3545; }
-        .btn-pantone:not(:disabled):not(.disabled):active, .btn-pantone:not(:disabled):not(.disabled).active,
-        .show > .btn-dpantone.dropdown-toggle {
-          color: #fff;
-          background-color: #bd2130;
-          border-color: #b21f2d; }
-          .btn-pantone:not(:disabled):not(.disabled):active:focus, .btn-pantone:not(:disabled):not(.disabled).active:focus,
-          .show > .btn-pantone.dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
+.btn-pantone {
+  color: #fff;
+  background-color: #FF6F61;
+  border-color: #fff; }
+.btn-pantone:hover {
+  color: #FF6F61;
+  background-color: #fff;
+  border-color: #FF6F61; }
+.btn-pantone:focus, .btn-pantone.focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
+.btn-pantone.disabled, .btn-pantone:disabled {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545; }
+.btn-pantone:not(:disabled):not(.disabled):active, .btn-pantone:not(:disabled):not(.disabled).active,
+.show > .btn-dpantone.dropdown-toggle {
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d; }
+.btn-pantone:not(:disabled):not(.disabled):active:focus, .btn-pantone:not(:disabled):not(.disabled).active:focus,
+.show > .btn-pantone.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
+
+
+
+.btn-outline-pantone {
+  color: #FF6F61;
+  border-color: #FF6F61; }
+.btn-outline-pantone:hover {
+  color: #fff;
+  background-color: #FF6F61;
+  border-color: #FF6F61; }
+.btn-outline-pantone:focus, .btn-outline-pantone.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+.btn-outline-pantone.disabled, .btn-outline-pantone:disabled {
+  color: #007bff;
+  background-color: transparent; }
+.btn-outline-pantone:not(:disabled):not(.disabled):active, .btn-outline-pantone:not(:disabled):not(.disabled).active,
+.show > .btn-outline-pantone.dropdown-toggle {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff; }
+.btn-outline-pantone:not(:disabled):not(.disabled):active:focus, .btn-outline-pantone:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-pantone.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+
+.bg-pantone {
+    background-color: #FF6F61 !important;
+  }
+
+#progressbar {
+  margin-top: 66px;
+}
+
+#SignUpButton {
+  margin-top: 57px;
+  text-align: right;
+}
+
+#resumePage {
+
+}
+
+/*
+@media only screen and (max-width: 1000px) {
+  #SignInUpButtons {
+    margin-top: 27px;
+  } */
+
+}
 
 body {
   font-family: 'Lato', sans-serif;
@@ -42,10 +90,11 @@ h7 {
     margin-bottom: 0;
 }
 
+/*
 .col-md-8 {
   box-shadow: 0 0 0.1cm;
   padding: 5em;
-}
+} */
 
 .col-md-4 {
   padding: 2em;
@@ -58,6 +107,13 @@ h7 {
 #resumepage {
   letter-spacing: 0.1em;
   word-spacing: 0.25em;
+  box-shadow: 0 0 0.1cm;
+  padding: 5em;
+  min-height: 500px;
+}
+
+#resetResume {
+  text-align: right;
 }
 
 #resumepage h4 {
@@ -173,15 +229,10 @@ h7 {
   padding-top: 48px;
 }
 
-@media (max-width: 575.98px) {
-  .navbar-collapse .nav-item a {
-  text-align: right;
-  padding-top: 0px;
-}
+
+
   .headline h7 {
     font-size: 80px;
-  }
-
   }
 
 

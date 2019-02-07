@@ -18,8 +18,15 @@ const app = new Vue({
     toggle: function() {
        this.isVisible = !this.isVisible,
        this.contact_isVisible = !this.contact_isVisible
-     }
-  }
+     },
+      resetResume: function () {
+        this.name = '',
+        this.current_position = '',
+        this.current_company = '',
+        this.current_location = '',
+        this.about_me = ''
+      }
+    }
 
 });
 

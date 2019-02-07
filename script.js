@@ -15,6 +15,18 @@
 }
 });
 
+function changeBottonSize() {
+  if (window.width <= 1000){
+    document.getElementById("SignInButton").classList.remove('btn-sm');
+    document.getElementById("SignInButton").classList.add('btn-xs');
+  } else {
+    document.getElementById("SignInButton").classList.remove('btn-xs');
+    document.getElementById("SignInButton").classList.add('btn-sm');
+  }
+}
+
+window.width()
+
 /*
 
 getElementById("about").addEventListener("click", function() {
