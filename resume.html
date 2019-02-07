@@ -43,7 +43,7 @@
       <div class="row">
         <div class="col-md-4">
           <div>
-            <button type="button" class="btn btn-sm btn-outline-pantone" @click="toggle">ABOUT</button>
+            <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">ABOUT</button>
           <div id="about_box" v-show="isVisible">
             <br>
             <input type="text" value="name" placeholder="My name" v-model="name"><br>
@@ -59,7 +59,7 @@
         </div>
           <br>
         <div>
-          <button type="button" class="btn btn-sm btn-outline-pantone" @click="toggle">CONTACT</button>
+          <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">CONTACT</button>
           <div id="contact_box" v-show="contact_isVisible">
             <br>
             <input type="text" value="email" placeholder="My email" v-model="email" /><br>
@@ -75,7 +75,7 @@
         </div>
           <br>
         <div>
-          <button type="button" class="btn btn-sm btn-outline-pantone" @click="toggle">EXPERIENCE</button>
+          <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">EXPERIENCE</button>
           <div id="experience_box" v-show="experience_isVisible">
           </div>
         </div>

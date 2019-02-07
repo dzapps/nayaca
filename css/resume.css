@@ -65,11 +65,11 @@
 
 }
 
-/*
-@media only screen and (max-width: 1000px) {
-  #SignInUpButtons {
-    margin-top: 27px;
-  } */
+
+@media only screen and (max-width: 767.98pxpx) {
+  #progressbar {
+    display: none;
+  }
 
 }
 
