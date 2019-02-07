@@ -309,13 +309,13 @@ h4 {
   visibility: hidden;
 }
 
-@media (min-width: 575.99px) { #nayacatext{display: none;} }
+/* @media (min-width: 575.99px) { #nayacatext{display: none;} }
 @media (max-width: 575.98px) {
 #mainheadline {
   font-size: 5em;
   padding-top: 100px;
   line-height: 1;
-}
+} */
 #nayacatext{display: inline-block; text-transform: uppercase;}
 #nayacalogo{display: none;}
 }
