@@ -59,6 +59,8 @@
 #SignUpButton {
   margin-top: 57px;
   text-align: right;
+  border: 3px solid green;
+  padding-left: 0px;
 }
 
 #resumePage {
@@ -70,7 +72,10 @@
   #progressbar {
     visibility: hidden;
   }
+  #SignUpButton {
+    font-size: 0.75em;
 
+  }
 }
 
 body {
