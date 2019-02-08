@@ -52,30 +52,65 @@
     background-color: #FF6F61 !important;
   }
 
-#progressbar {
-  margin-top: 66px;
+  #brandimage {
+    width: 100px;
+    height: 100px;
+  }
+#SignUpCol {
+  text-align: right;
 }
 
 #SignUpButton {
   margin-top: 57px;
-  text-align: right;
-  border: 3px solid green;
-  padding-left: 0px;
-}
+  }
 
 #resumePage {
 
 }
 
+.container-fluid {
+  padding: 10px;
+  margin: 0;
+  height: 120px;
+  position: fixed;
+  background: white;
+  z-index: 10;
+}
 
-@media only screen and (max-width: 767.99px) {
-  #progressbar {
-    visibility: hidden;
+#progress {
+  height: 20px;
+  margin-top: 66px;
+  padding: 0;
+}
+
+#app {
+  padding-top: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid {
+    height: 70px;
+  }
+
+  #brandimage {
+    width: 50px;
+    height: 50px;
+  }
+  #progress {
+    height: 10px;
+    margin-top: 35px;
+    font-size: 0.5em;
   }
   #SignUpButton {
-    font-size: 0.75em;
-
+    margin-top: 15px;
+    margin-left: -11px;
   }
+  #app {
+    padding-top: 70px;
+  }
+}
+#app {
+  padding-top: 120px;
 }
 
 body {
@@ -247,10 +282,7 @@ h7 {
   padding-top: 0px;
 }*/
 
-.navbar-brand img {
-  width: 100px;
-  height: 100px;
-}
+
 
 
 .navbar-toggler, .navbar-toggler:hover, .navbar-toggler:active {
