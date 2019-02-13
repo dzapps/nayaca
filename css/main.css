@@ -68,8 +68,8 @@ html, body {
   background-repeat: repeat;
   display: block;
   margin-bottom: auto;
-  padding-bottom: auto;
-  background-position: relative;
+  /* padding-bottom: auto; */
+  /* background-position: relative; */
 }
 
 #blog {
@@ -106,7 +106,7 @@ html, body {
 
 .bg-white {
   background-color: white;
-  display: cover;
+  /* display: cover; */
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -252,14 +252,14 @@ html, body {
   display: none;
   margin-bottom: 0;
   padding-bottom: 0;
-  background-position: relative;
+  /* background-position: relative; */
   text-align: center;
   color: black;
   font-weight: bold;
 }
 
 #ragazzabox {
-  filter: !grayscale(100%);
+  filter: grayscale(100%);
   padding: 10px;
   background-color: white;
   border-radius: 10px;
@@ -296,7 +296,7 @@ html, body {
   }
   #gotoresume-sm, #gotoresume-lg {
     margin: auto;
-    padding: auto;
+   /* padding: auto; */
   }
 }
 
@@ -470,7 +470,7 @@ html, body {
   letter-spacing: 0.1rem;
   word-spacing: 0.25rem;
   color: white;
-  margin: 25 0;
+  margin: 25px 0;
 }
 
 
