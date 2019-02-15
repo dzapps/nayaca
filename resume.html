@@ -45,20 +45,22 @@
     <div class="container" id="app">
       <div class="row">
         <div class="col-md-4">
-          <div>
-            <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">ABOUT</button>
-          <div id="about_box" v-show="isVisible">
-            <br>
-            <input type="text" value="name" placeholder="My name" v-model="name"><br>
-            <br>
-            <input type="text" value="current_position" placeholder="My current position" v-model="current_position"><br>
-            <br>
-            <input type="text" value="current_company" placeholder="My current company" v-model="current_company"><br>
-            <br>
-            <input type="text" value="current_location" placeholder="My current location" v-model="current_location"><br>
-            <br>
-            <input type="text" value="about_me" placeholder="About me" v-model="about_me"><br>
+          <form>
+            <div class="form-group">
+              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">ABOUT</button>
+            <div id="about_box" v-show="isVisible">
+              <br>
+            <input type="text" value="name" class="form-control" placeholder="My name" v-model="name"><br>
+
+            <input type="text" value="current_position" class="form-control" placeholder="My current position" v-model="current_position"><br>
+
+            <input type="text" value="current_company" class="form-control" placeholder="My current company" v-model="current_company"><br>
+
+            <input type="text" value="current_location" class="form-control" placeholder="My current location" v-model="current_location"><br>
+
+            <input type="text" value="about_me" class="form-control" placeholder="About me" v-model="about_me">
           </div>
+        </form>
         </div>
           <br>
         <div>
@@ -125,11 +127,14 @@ Bootstrap example classes till here -->
 
 <div id="resumepage">
         <h4>{{ name }}</h4>
-        <span class="inliner"><h6>{{ current_position }}</h6>
+        <h6>{{ currently }}</h6>
+      <!--  <span class="inliner"><h6>{{ current_position }}</h6>
           <h6 v-if="current_position">&nbsp; | &nbsp;</h6>
           <h6>{{ current_company }}</h6><h6 v-if="current_company">&nbsp; | &nbsp;</h6>
           <h6>{{ current_location }}</h6>
         </span><br>
+        <span class="inliner"><h6 v-if="currently">{{ currently }}</h6>
+          </span><br>-->
         <span class="inliner">
           <p class="pantone-headline" v-if="about_me">About &nbsp; &nbsp; &nbsp;</p>
           <p>{{ about_me }}</p>

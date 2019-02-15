@@ -14,6 +14,21 @@ const app = new Vue({
     isVisible: true,
     contact_isVisible: false,
   },
+  computed: {
+    currently: function() {
+  if (this.current_position && this.current_company && this.current_location) {
+    return this.current_position + ' | ' + this.current_company + ' | ' + this.current_location;
+  } else if (this.current_position && this.current_company) {
+    return this.current_position + ' | ' + this.current_company;
+  } else if (this.current_position && this.current_location) {
+    return this.current_position + ' | ' + this.current_location;
+  } else if (this.current_company && this.current_location) {
+    return this.current_company + ' | ' + this.current_location;
+  } else {
+    return this.current_position || this.current_company || this.current_location;
+  }
+    }
+  },
   methods: {
     toggle: function() {
        this.isVisible = !this.isVisible,

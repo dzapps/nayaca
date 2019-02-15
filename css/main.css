@@ -68,8 +68,7 @@ html, body {
   background-repeat: repeat;
   display: block;
   margin-bottom: auto;
-  /* padding-bottom: auto; */
-  /* background-position: relative; */
+  text-align: center;
 }
 
 #blog {
@@ -164,7 +163,6 @@ html, body {
   display: none;
 }
 
-
 #headline {
   text-align: center;
   text-shadow: 1px 1px black;
@@ -217,7 +215,6 @@ html, body {
 }
 
 #gotoresume-sm, #gotoresume-lg {
-  text-align: center;
   letter-spacing: 0.1em;
   word-spacing: 0.25em;
   font-weight: bold;
@@ -227,7 +224,9 @@ html, body {
 }
 
 #gotoresume-button-sm {
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #gotoresume-button-lg {
@@ -238,6 +237,7 @@ html, body {
   letter-spacing: 0.1em;
   word-spacing: 0.25em;
   font-weight: bold;
+
   text-align: center;
 }
 
@@ -268,7 +268,6 @@ html, body {
 }
 
 #message {
-  text-align: center;
 }
 
 @media (orientation: portrait) {
@@ -295,9 +294,9 @@ html, body {
     display: block;
   }
   #gotoresume-sm, #gotoresume-lg {
-    margin: auto;
+
    /* padding: auto; */
-  }
+  text-align: center;
 }
 
 @media (min-width: 360px) and (orientation: portrait) {
@@ -397,7 +396,7 @@ html, body {
     display: none;
   }
   #gotoresume-button-lg {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -409,7 +408,8 @@ html, body {
     display: block;
   }
   #gotoresume-sm, #gotoresume-lg {
-    margin: 3em 0 0 0;
+    margin-top: 3em;
+    text-align: center;
   }
 }
 
