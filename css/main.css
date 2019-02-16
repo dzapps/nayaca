@@ -280,13 +280,8 @@ html, body {
   margin: 0;
 }
 
-#footer p {
-  font-size: 10px;
-  padding: 5px;
-  margin: 0;
-}
-
 #footer a {
+  font-size: 10px;
   color: white;
   text-decoration: none;
 }
@@ -296,12 +291,10 @@ html, body {
   height: 15px;
 }
 
-/* FOR SOME REASON THIS STYLE IS NOT APPLYING AT ALL*/
+/* IS IT WORKING NOW?*/
 #usaflag {
   height: 13px;
-  padding: 0;
   border: 1px solid white;
-  margin: 0;
 }
 
 @media (orientation: portrait) {
