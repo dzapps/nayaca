@@ -62,7 +62,7 @@ html, body {
 
 #main {
   max-width: 100%;
-  min-height: calc(100% - 30px);
+  min-height: calc(100% - 25.969px);
   background-image: url("/assets/media/NYC2.jpg");
   background-size: cover;
   background-repeat: repeat;
@@ -223,19 +223,19 @@ html, body {
   padding: 0;
 }
 
-#gotoresume-button-sm {
+#gotoresumebuttonsm {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-#gotoresume-button-lg {
+#gotoresumebuttonlg {
   display: none;
   margin-left: auto;
   margin-right: auto;
 }
 
-#gotoresume-text-sm, #gotoresume-text-lg {
+#gotoresumetextsm, #gotoresumetextlg {
   letter-spacing: 0.1em;
   word-spacing: 0.25em;
   font-weight: bold;
@@ -246,7 +246,7 @@ html, body {
   filter: grayscale(100%);
   width: 100%;
   max-width: 100%;
-  min-height: calc(100% - 30px);
+  min-height: calc(100% - 25.969px);
   background-image: url('/assets/media/ragazza.jpg');
   background-size: cover;
   background-repeat: repeat;
@@ -269,31 +269,39 @@ html, body {
 }
 
 #message {
+  text-align: center;
 }
 
 #footer {
   background-color: black;
   text-align: center;
   font-size: 10px;
-  height: 30px;
+  padding: 5px;
+  margin: 0;
 }
 
 #footer p {
-  padding: 10px 0;
-  line-height: 1;
+  font-size: 10px;
+  padding: 5px;
+  margin: 0;
 }
 
 #footer a {
   color: white;
-  line-height: 1;
+  text-decoration: none;
+}
+
+#instagram {
+  filter: invert(100%);
+  height: 15px;
 }
 
 /* FOR SOME REASON THIS STYLE IS NOT APPLYING AT ALL*/
 #usaflag {
-  height: 8px;
-  width: auto;
+  height: 13px;
+  padding: 0;
   border: 1px solid white;
-  margin: 10px 0;
+  margin: 0;
 }
 
 @media (orientation: portrait) {
@@ -419,10 +427,10 @@ html, body {
     padding-top: 36px;
   }
 
-  #gotoresume-button-sm {
+  #gotoresumebuttonsm {
     display: none;
   }
-  #gotoresume-button-lg {
+  #gotoresumebuttonlg {
     display: block;
   }
 }
@@ -475,10 +483,10 @@ html, body {
   .navbar-expand-sm .nav-item a {
     padding-top: 43px;
   }
-  #gotoresume-button-sm {
+  #gotoresumebuttonsm {
     display: none;
   }
-  #gotoresume-button-lg {
+  #gotoresumebuttonlg {
     display: block;
   }
 
