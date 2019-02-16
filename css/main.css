@@ -204,7 +204,7 @@ html, body {
 }
 
 #gotoresumebuttonsm {
-  display: block;
+  display: inline;
   margin-left: auto;
   margin-right: auto;
 }
@@ -405,7 +405,7 @@ html, body {
     display: none;
   }
   #gotoresumebuttonlg {
-    display: block;
+    display: inline;
   }
 }
 
@@ -461,7 +461,7 @@ html, body {
     display: none;
   }
   #gotoresumebuttonlg {
-    display: block;
+    display: inline;
   }
 
   #ragazza {
