@@ -62,7 +62,7 @@ html, body {
 
 #main {
   max-width: 100%;
-  min-height: calc(100% - 25.969px);
+  min-height: calc(100% - 21.969px);
   background-image: url("/assets/media/NYC2.jpg");
   background-size: cover;
   background-repeat: repeat;
@@ -246,7 +246,7 @@ html, body {
   filter: grayscale(100%);
   width: 100%;
   max-width: 100%;
-  min-height: calc(100% - 25.969px);
+  min-height: calc(100% - 21.969px);
   background-image: url('/assets/media/ragazza.jpg');
   background-size: cover;
   background-repeat: repeat;
@@ -276,7 +276,7 @@ html, body {
   background-color: black;
   text-align: center;
   font-size: 10px;
-  padding: 5px;
+  padding: 3px;
   margin: 0;
 }
 
