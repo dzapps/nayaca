@@ -97,6 +97,7 @@ html, body {
 #navlink_1, #navlink_2 {
   color: white;
   font-size: 0.75em;
+  text-align: left;
 
 }
 #navlink_1:hover, #navlink_2:hover {
