@@ -255,16 +255,17 @@ html, body {
   padding-bottom: 0;
   /* background-position: relative; */
   text-align: center;
-  color: black;
+  color: red;
   font-weight: bold;
 }
 
 #ragazzabox {
   filter: grayscale(100%);
   padding: 10px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 10px;
-  color: black;
+  color: red;
+  text-shadow: 1px 1px white;
   font-weight: bold;
 }
 
