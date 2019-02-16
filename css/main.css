@@ -143,27 +143,6 @@ html, body {
   justify-content: flex-end;
 }
 
-#efsEasy {
-  background-image: url('/assets/media/easy.jpg');
-  height: 100%;
-  width: 100%;
-  background-size: 100%;
-  padding: 10px;
-}
-
-#efsFast {
-  background-image: url('/assets/media/fast.jpg');
-  background-size: cover;
-}
-#efsSuccessful {
-  background-image: url('/assets/media/successful.jpg');
-  background-size: 100%;
-}
-
-#EasyFastSuccessful {
-  display: none;
-}
-
 #headline {
   text-align: center;
   text-shadow: 1px 1px black;
@@ -500,37 +479,6 @@ html, body {
   padding-top: 400px;
   text-align: center;
   text-shadow: 2px 2px black;
-}
-
-.efs {
-  text-align: center;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.25rem;
-  color: white;
-  margin: 25px 0;
-}
-
-
-.efs img {
-  filter: invert(100%);
-  line-height: 1;
-}
-
-.efs h4 {
-  letter-spacing: 0.25em;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.efs h6 {
-  letter-spacing:0.25em;
-  word-spacing: 0.25em;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.efs p {
-  line-height: 1;
 }
 
 .blogbox {
