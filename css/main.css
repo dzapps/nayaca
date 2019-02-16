@@ -271,6 +271,31 @@ html, body {
 #message {
 }
 
+#footer {
+  background-color: black;
+  text-align: center;
+  font-size: 10px;
+  height: 30px;
+}
+
+#footer p {
+  padding: 10px 0;
+  line-height: 1;
+}
+
+#footer a {
+  color: white;
+  line-height: 1;
+}
+
+/* FOR SOME REASON THIS STYLE IS NOT APPLYING AT ALL*/
+#usaflag {
+  height: 8px;
+  width: auto;
+  border: 1px solid white;
+  margin: 10px 0;
+}
+
 @media (orientation: portrait) {
   #message {
     margin: 13em auto auto auto;
@@ -457,7 +482,6 @@ html, body {
     display: block;
   }
 
-
   #ragazza {
     display: inline-block;
   }
@@ -535,32 +559,4 @@ html, body {
 
 .nayacaprint {
   text-align: left;
-}
-
-#footer {
-  background-color: black;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  font-size: 10px;
-  height: 30px;
-}
-
-#footer p {
-  padding: 0;
-  line-height: 1;
-}
-
-#footer a {
-  color: white;
-  padding: 0;
-  line-height: 1;
-}
-
-/* FOR SOME REASON THIS STYLE IS NOT APPLYING AT ALL*/
-#usaflag {
-  display: none;
-  height: 10%;
-  width: 10%;
-  border: 1px solid red;
 }
