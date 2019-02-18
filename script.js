@@ -7,8 +7,10 @@ window.addEventListener("scroll", function() {
 }
 });
 
-document.getElementById("contactbtn").addEventListener("click", function() {
-document.getElementById("progressbar").innerHTML = "20%";
+document.getElementById("SignUpButton").addEventListener("click", function() {
+document.getElementById("progressive").innerHTML = "10%";
+document.getElementById("progressive").style.width = "15%";
+document.getElementById("progressive").style.color = "white";
 });
 
 /*

@@ -77,8 +77,9 @@
   z-index: 10;
 }
 
-.progress-bar {
-  width: 12.5%;
+#progressive {
+  width: 0%;
+  color: black;
 }
 
 #progress {
@@ -117,9 +118,7 @@
     padding-top: 70px;
   }
 }
-#app {
-  padding-top: 120px;
-}
+
 
 body {
   font-family: 'Lato', sans-serif;

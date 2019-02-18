@@ -47,6 +47,14 @@ const app = new Vue({
        this.contact_isVisible = !this.contact_isVisible,
        this.experience_isVisible = !this.experience_isVisible
      },
+/*     progressivo: function() {
+       if (this.name = true && this.email = true) {
+         return
+       }
+        this.about_isVisible = !this.about_isVisible,
+        this.contact_isVisible = !this.contact_isVisible,
+        this.experience_isVisible = !this.experience_isVisible
+      }, */
      submitResume: function() {
        this.name = '',
        this.current_position = '',
