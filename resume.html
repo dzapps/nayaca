@@ -48,41 +48,55 @@
           <form>
             <div class="form-group">
               <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">ABOUT</button>
-            <div id="about_box" v-show="isVisible">
-              <br>
-            <input type="text" value="name" class="form-control" placeholder="My name" v-model="name"><br>
-
-            <input type="text" value="current_position" class="form-control" placeholder="My current position" v-model="current_position"><br>
-
-            <input type="text" value="current_company" class="form-control" placeholder="My current company" v-model="current_company"><br>
-
-            <input type="text" value="current_location" class="form-control" placeholder="My current location" v-model="current_location"><br>
-
-            <input type="text" value="about_me" class="form-control" placeholder="About me" v-model="about_me">
-          </div>
-        </form>
-        </div>
-          <br>
-        <div>
-          <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">CONTACT</button>
-          <div id="contact_box" v-show="contact_isVisible">
+              <div id="about_box" v-if="about_isVisible">
+                <br>
+                <input type="text" value="name" class="form-control" placeholder="My name" v-model="name">
+                <br>
+                <input type="text" value="current_position" class="form-control" placeholder="My current position" v-model="current_position">
+                <br>
+                <input type="text" value="current_company" class="form-control" placeholder="My current company" v-model="current_company">
+                <br>
+                <input type="text" value="current_location" class="form-control" placeholder="My current location" v-model="current_location">
+                <br>
+                <textarea type="text" value="about_me" class="form-control" rows="3" placeholder="About me" v-model="about_me"></textarea>
+              </div>
+            </div>
             <br>
-            <input type="text" value="email" placeholder="My email" v-model="email" /><br>
+            <div class="form-group">
+              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">CONTACT</button>
+              <div id="contact_box" v-if="contact_isVisible">
+                <br>
+                <input type="text" value="email" class="form-control" placeholder="My email" v-model="email">
+                <br>
+                <input type="text" value="phone" class="form-control" placeholder="My phone number" v-model="phone">
+                <br>
+                <input type="text" value="website" class="form-control" placeholder="My website" v-model="website">
+                <br>
+                <input type="text" value="linkedIn" class="form-control" placeholder="My linkedIn account" v-model="linkedIn">
+                <br>
+                <input type="text" value="address" class="form-control" placeholder="My address" v-model="address">
+              </div>
+            </div>
             <br>
-            <input type="number" value="phone" placeholder="My phone number" v-model="phone"><br>
+            <div class="form-group">
+              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">EXPERIENCE</button>
+              <div id="experience_box" v-if="experience_isVisible">
+                <br>
+                <input type="text" value="position" class="form-control" placeholder="Position" v-model="position">
+                <br>
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate">
+                <br>
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate">
+                <br>
+                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend">
+                <br>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location">
+                <br>
+                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks"></textarea>
+              </div>
+            </div>
             <br>
-            <input type="text" value="website" placeholder="My website" v-model="website"><br>
-            <br>
-            <input type="text" value="linkedIn" placeholder="My linkedIn account" v-model="linkedIn"><br>
-            <br>
-            <input type="text" value="address" placeholder="My address" v-model="address"><br>
-          </div>
-        </div>
-          <br>
-        <div>
-          <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">EXPERIENCE</button>
-          <div id="experience_box" v-show="experience_isVisible">
-          </div>
+          </form>
         </div>
 
 
@@ -121,32 +135,51 @@
 
 Bootstrap example classes till here -->
 
+
+      <div class="col-md-8">
+
+        <div id="resumepage">
+          <h4>{{ name }}</h4>
+          <h6>{{ currently }}</h6>
+          <span class="inliner">
+            <p class="pantone-headline" v-if="about_me">About &nbsp;&nbsp;&nbsp;</p>
+            <p>{{ about_me }}</p>
+          </span>
+
+          <p>{{ email }}</p>
+          <p>{{ phone }}</p>
+          <p>{{ website }}</p>
+          <p>{{ linkedIn }}</p>
+          <p>{{ address }}</p>
+          <p>{{ position }}</p>
+          <p>{{ startdate }}</p>
+          <p>{{ enddate }}</p>
+          <p>{{ noend }}</p>
+          <p>{{ location }}</p>
+          <p>{{ tasks }}</p>
+
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col">
+            <div class="signupResume">
+              <button type="button" class="btn btn-sm btn-pantone" @click="toggle">Sign Up</button>
+              <span>*</span>
+             </div>
+           </div>
+           <div class="col">
+             <div class="pdf-reset">
+               <button type="button" class="btn btn-sm btn-outline-dark" @click="submitResume">Create pdf</button>
+               <button type="button" class="btn btn-sm btn-outline-danger" @click="resetResume">Reset</button>
+             </div>
+           </div>
+         </div>
+        <hr>
+        <div id="signupExplanation">
+          <p>* Sign up to get your personal Nayaca account. As a user you can keep your data, choose from our beautiful color designs and edit your resume any time to match
+            new positions in the blink of an eye. If you are already a registered user, click the 'Sign Up' button to sign in.</p>
+        </div>
       </div>
-
-        <div class="col-md-8">
-
-<div id="resumepage">
-        <h4>{{ name }}</h4>
-        <h6>{{ currently }}</h6>
-      <!--  <span class="inliner"><h6>{{ current_position }}</h6>
-          <h6 v-if="current_position">&nbsp; | &nbsp;</h6>
-          <h6>{{ current_company }}</h6><h6 v-if="current_company">&nbsp; | &nbsp;</h6>
-          <h6>{{ current_location }}</h6>
-        </span><br>
-        <span class="inliner"><h6 v-if="currently">{{ currently }}</h6>
-          </span><br>-->
-        <span class="inliner">
-          <p class="pantone-headline" v-if="about_me">About &nbsp; &nbsp; &nbsp;</p>
-          <p>{{ about_me }}</p>
-        </span>
-        </div>
-        <br>
-
-        <div id="resetResume">
-          <button type="button" class="btn btn-sm btn-outline-danger" @click="resetResume">Reset resume</button>
-        </div>
-        <br>
-</div>
 
       </div>
     </div>

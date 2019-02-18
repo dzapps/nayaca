@@ -87,6 +87,10 @@
   padding-top: 120px;
 }
 
+.form-control {
+  line-height: 1.5;
+}
+
 @media only screen and (max-width: 768px) {
   .container-fluid {
     height: 70px;
@@ -152,9 +156,18 @@ h7 {
   min-height: 500px;
 }
 
-#resetResume {
+.signupResume {
+  text-align: left;
+}
+
+.pdf-reset {
   text-align: right;
 }
+
+#signupExplanation {
+  font-weight: normal;
+  font-size: 12px;
+  }
 
 #resumepage h4 {
   font-size: 2em;

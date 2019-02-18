@@ -11,8 +11,20 @@ const app = new Vue({
     website: '',
     linkedIn: '',
     address: '',
-    isVisible: true,
+    email: '',
+    phone: '',
+    website: '',
+    linkedIn: '',
+    address: '',
+    position: '',
+    startdate: '',
+    enddate: '',
+    noend: '',
+    location: '',
+    tasks: '',
+    about_isVisible: true,
     contact_isVisible: false,
+    experience_isVisible: false
   },
   computed: {
     currently: function() {
@@ -31,16 +43,24 @@ const app = new Vue({
   },
   methods: {
     toggle: function() {
-       this.isVisible = !this.isVisible,
-       this.contact_isVisible = !this.contact_isVisible
+       this.about_isVisible = !this.about_isVisible,
+       this.contact_isVisible = !this.contact_isVisible,
+       this.experience_isVisible = !this.experience_isVisible
      },
-      resetResume: function () {
-        this.name = '',
-        this.current_position = '',
-        this.current_company = '',
-        this.current_location = '',
-        this.about_me = ''
-      }
+     submitResume: function() {
+       this.name = '',
+       this.current_position = '',
+       this.current_company = '',
+       this.current_location = '',
+       this.about_me = ''
+     },
+    resetResume: function() {
+      this.name = '',
+      this.current_position = '',
+      this.current_company = '',
+      this.current_location = '',
+      this.about_me = ''
+     }
     }
 
 });
