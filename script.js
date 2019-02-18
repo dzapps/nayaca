@@ -7,6 +7,10 @@ window.addEventListener("scroll", function() {
 }
 });
 
+document.getElementById("contactbtn").addEventListener("click", function() {
+document.getElementById("progressbar").innerHTML = "20%";
+});
+
 /*
 window.addEventListener("scroll", function() {
   if (pageYOffset > 300) {
