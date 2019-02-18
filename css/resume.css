@@ -158,10 +158,14 @@ h7 {
 
 .signupResume {
   text-align: left;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .pdf-reset {
   text-align: right;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 #signupExplanation {
