@@ -60,7 +60,7 @@ const app = new Vue({
       exportPdf: function() {
        const doc = new jsPDF();
        doc.addHTML(document.getElementById('resumepage'),function() {
-    doc.save('web.pdf');
+    doc.save('nayaca.pdf');
 });
 
      },
