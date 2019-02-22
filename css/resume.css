@@ -562,3 +562,12 @@ h4 {
 #resumenav {
   color: black;
 }
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #resumepage {
+    visibility: visible;
+  }
+}
