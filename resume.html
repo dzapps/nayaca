@@ -105,17 +105,19 @@
               <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">EXPERIENCE</button>
               <div id="experience_box" v-if="experience_isVisible">
                 <br>
-                <input type="text" value="position" class="form-control" placeholder="Position" v-model="position">
+                <input type="text" value="position1" class="form-control" placeholder="Position" v-model="positiona">
                 <br>
-                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate">
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdatea">
                 <br>
-                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate">
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddatea">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend">
+                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noenda">
                 <br>
-                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location">
+                <input type="text" value="company" class="form-control" placeholder="Company" v-model="companya">
                 <br>
-                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks"></textarea>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="locationa">
+                <br>
+                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasksa"></textarea>
               </div>
             </div>
             <br>
@@ -286,6 +288,40 @@ Bootstrap example classes till here -->
                 <div id="experience_icon">
                   <img src="./assets/media/icons/experience.png" height="24px">
                 </div>
+                <br>
+
+                <div>
+                  <h6>{{ positiona }}</h6>
+                </div>
+
+                <div>
+                <span class="inliner">
+                  <img src="./assets/media/icons/calendar.png" height="19px" v-if="startdatea || enddatea || noenda">
+                  <h6>&nbsp;{{ perioda }}</h6>
+                </span>
+                </div>
+
+                <div>
+                <span class="inliner">
+                  <img src="./assets/media/icons/company.png" height="19px" v-if="companya">
+                  <h6>&nbsp;{{ companya }}</h6>
+                </span>
+                </div>
+
+                <div>
+                <span class="inliner">
+                  <img src="./assets/media/icons/location.png" height="19px" v-if="locationa">
+                  <h6>&nbsp;{{ locationa }}</h6>
+                </span>
+                </div>
+
+                <div>
+                <span class="inliner">
+                  <img src="./assets/media/icons/tasks.png" height="19px" v-if="tasksa">
+                  <h6>&nbsp;{{ tasksa }}</h6>
+                </span>
+                </div>
+
               </div>
 
               <div class="col-md-6">

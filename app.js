@@ -24,12 +24,13 @@ const app = new Vue({
       address: '',
       video: '',
       desired_position: '',
-      position: '',
-      startdate: '',
-      enddate: '',
-      noend: '',
-      location: '',
-      tasks: '',
+      positiona: '',
+      startdatea: '',
+      enddatea: '',
+      noenda: '',
+      companya: '',
+      locationa: '',
+      tasksa: '',
       about_isVisible: true,
       contact_isVisible: false,
       experience_isVisible: false,
@@ -49,6 +50,25 @@ const app = new Vue({
   } else {
     return this.current_position || this.current_company || this.current_location;
   }
+},
+    perioda() {
+      if (this.startdatea && this.enddatea && this.noenda) {
+        return 'since ' + this.startdatea;
+      } else if (this.startdatea && this.enddatea) {
+        return this.startdatea + ' - ' + this.enddatea;
+      } else if (this.startdatea && this.noenda) {
+        return 'since ' + this.startdatea;
+      } else if (this.enddatea && this.noenda) {
+        return null;
+      } else if (this.startdatea) {
+        return 'since ' + this.startdatea;
+      } else if (this.enddatea) {
+        return 'until ' + this.enddatea;
+      } else if (this.noenda) {
+        return 'I currently work here.';
+      } else {
+        return null;
+      }
     }
   },
   methods: {
