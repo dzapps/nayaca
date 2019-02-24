@@ -140,11 +140,31 @@ Bootstrap example classes till here -->
 
         <div id="resumepage">
           <h4>{{ name }}</h4>
-          <h6>{{ currently }}</h6>
+          <!--<h6>{{ currently }}</h6>-->
+          <div>
           <span class="inliner">
-            <p class="pantone-headline" v-if="about_me">About &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <p>{{ about_me }}</p>
+            <img src="./assets/media/icons/position.png" height="19px" v-if="current_position">
+            <h6>&nbsp;&nbsp;&nbsp;{{ current_position }}</h6>
           </span>
+          </div>
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/company.png" height="19px" v-if="current_company">
+            <h6>&nbsp;&nbsp;&nbsp;{{ current_company }}</h6>
+          </span>
+          </div>
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/location.png" height="19px" v-if="current_location">
+            <h6>&nbsp;&nbsp;&nbsp;{{ current_location }}</h6>
+          </span>
+          </div>
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/about.png" height="19px" v-if="current_location">
+            <h6>&nbsp;&nbsp;&nbsp;{{ about_me }}</h6>
+          </span>
+          </div>
 
           <p>{{ email }}</p>
           <p>{{ phone }}</p>
