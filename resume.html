@@ -147,30 +147,65 @@ Bootstrap example classes till here -->
             <h6>&nbsp;&nbsp;&nbsp;{{ current_position }}</h6>
           </span>
           </div>
+
           <div>
           <span class="inliner">
             <img src="./assets/media/icons/company.png" height="19px" v-if="current_company">
             <h6>&nbsp;&nbsp;&nbsp;{{ current_company }}</h6>
           </span>
           </div>
+
           <div>
           <span class="inliner">
             <img src="./assets/media/icons/location.png" height="19px" v-if="current_location">
             <h6>&nbsp;&nbsp;&nbsp;{{ current_location }}</h6>
           </span>
           </div>
+
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/about.png" height="19px" v-if="current_location">
+            <img src="./assets/media/icons/about.png" height="19px" v-if="about_me">
             <h6>&nbsp;&nbsp;&nbsp;{{ about_me }}</h6>
           </span>
           </div>
 
-          <p>{{ email }}</p>
-          <p>{{ phone }}</p>
-          <p>{{ website }}</p>
-          <p>{{ linkedIn }}</p>
-          <p>{{ address }}</p>
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/email.png" height="19px" v-if="email">
+            <h6>&nbsp;&nbsp;&nbsp;{{ email }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/phone.png" height="19px" v-if="phone">
+            <h6>&nbsp;&nbsp;&nbsp;{{ phone }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/website.png" height="19px" v-if="website">
+            <h6>&nbsp;&nbsp;&nbsp;{{ website }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/linkedin.png" height="19px" v-if="linkedIn">
+            <h6>&nbsp;&nbsp;&nbsp;{{ linkedIn }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/address.png" height="19px" v-if="address">
+            <h6>&nbsp;&nbsp;&nbsp;{{ address }}</h6>
+          </span>
+          </div>
+
+          <span v-if="email"><hr></span>
+
           <p>{{ position }}</p>
           <p>{{ startdate }}</p>
           <p>{{ enddate }}</p>
