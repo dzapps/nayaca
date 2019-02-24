@@ -64,10 +64,6 @@
   margin-top: 57px;
   }
 
-#resumePage {
-
-}
-
 .container-fluid {
   padding: 10px;
   margin: 0;
@@ -189,6 +185,17 @@ h7 {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 0.5em;
+}
+
+#WHYME {
+  font-size: 1.25em;
+  color: #FF6F61;
+  font-weight: bold;
+  text-align: center;
+}
+
+#experience_icon, #education_icon {
+  text-align: center;
 }
 
 /* styling placeholder: */
@@ -480,10 +487,6 @@ h4 {
 .flex-item {
   display: flex;
   justify-content: space-between;
-}
-
-.nayacaprint {
-  text-align: left;
 }
 
 .btn-lg span img {

@@ -58,10 +58,21 @@
                 <br>
                 <input type="text" value="current_location" class="form-control" placeholder="My current location" v-model="current_location">
                 <br>
+                <input type="text" value="degree" class="form-control" placeholder="My degree" v-model="degree">
+                <br>
+                <input type="text" value="languages" class="form-control" placeholder="My languages" v-model="languages">
+                <br>
+                <input type="text" value="coding" class="form-control" placeholder="My coding" v-model="coding">
+                <br>
+                <input type="text" value="accomplishment" class="form-control" placeholder="My greatest accomplishment" v-model="accomplishment">
+                <br>
                 <textarea type="text" value="about_me" class="form-control" rows="3" placeholder="About me" v-model="about_me"></textarea>
+                <br>
+                <input type="text" value="salary" class="form-control" placeholder="My salary expectations" v-model="salary">
+                <br>
               </div>
             </div>
-            <br>
+
             <div class="form-group">
               <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">CONTACT</button>
               <div id="contact_box" v-if="contact_isVisible">
@@ -75,9 +86,21 @@
                 <input type="text" value="linkedIn" class="form-control" placeholder="My linkedIn account" v-model="linkedIn">
                 <br>
                 <input type="text" value="address" class="form-control" placeholder="My address" v-model="address">
+                <br>
+                <input type="text" value="video" class="form-control" placeholder="My application video" v-model="video">
               </div>
             </div>
             <br>
+
+            <div class="form-group">
+              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">APPLICATION</button>
+              <div id="application_box" v-if="application_isVisible">
+                <br>
+                <input type="text" value="desired_position" class="form-control" placeholder="Desired position" v-model="desired_position">
+              </div>
+            </div>
+            <br>
+
             <div class="form-group">
               <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">EXPERIENCE</button>
               <div id="experience_box" v-if="experience_isVisible">
@@ -164,8 +187,43 @@ Bootstrap example classes till here -->
 
           <div>
           <span class="inliner">
+            <img src="./assets/media/icons/degree.png" height="19px" v-if="degree">
+            <h6>&nbsp;&nbsp;&nbsp;{{ degree }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/languages.png" height="19px" v-if="languages">
+            <h6>&nbsp;&nbsp;&nbsp;{{ languages }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/coding.png" height="19px" v-if="coding">
+            <h6>&nbsp;&nbsp;&nbsp;{{ coding }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/accomplishment.png" height="19px" v-if="accomplishment">
+            <h6>&nbsp;&nbsp;&nbsp;{{ accomplishment }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
             <img src="./assets/media/icons/about.png" height="19px" v-if="about_me">
             <h6>&nbsp;&nbsp;&nbsp;{{ about_me }}</h6>
+          </span>
+          </div>
+
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/salary.png" height="19px" v-if="salary">
+            <h6>&nbsp;&nbsp;&nbsp;{{ salary }}</h6>
           </span>
           </div>
 
@@ -204,15 +262,40 @@ Bootstrap example classes till here -->
           </span>
           </div>
 
+          <div>
+          <span class="inliner">
+            <img src="./assets/media/icons/video.png" height="19px" v-if="video">
+            <h6>&nbsp;&nbsp;&nbsp;{{ video }}</h6>
+          </span>
+          </div>
+
           <span v-if="email"><hr></span>
 
-          <p>{{ position }}</p>
-          <p>{{ startdate }}</p>
-          <p>{{ enddate }}</p>
-          <p>{{ noend }}</p>
-          <p>{{ location }}</p>
-          <p>{{ tasks }}</p>
+          <div id="WHYME">
+          <span class="inliner">
+            <img src="./assets/media/icons/application_black.png" height="24px" v-if="desired_position">
+            <h6>&nbsp;&nbsp;&nbsp;{{ desired_position }}</h6>
+          </span>
+          </div>
 
+          <span v-if="desired_position"><hr></span>
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <div id="experience_icon">
+                  <img src="./assets/media/icons/experience.png" height="24px">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div id="education_icon">
+                  <img src="./assets/media/icons/education.png" height="24px">
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
         <hr>
         <div class="row">

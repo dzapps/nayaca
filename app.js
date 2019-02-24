@@ -7,6 +7,11 @@ const app = new Vue({
       current_company: '',
       current_location: '',
       about_me: '',
+      accomplishment: '',
+      coding: '',
+      degree: '',
+      languages: '',
+      salary: '',
       email: '',
       phone: '',
       website: '',
@@ -17,6 +22,8 @@ const app = new Vue({
       website: '',
       linkedIn: '',
       address: '',
+      video: '',
+      desired_position: '',
       position: '',
       startdate: '',
       enddate: '',
@@ -25,7 +32,8 @@ const app = new Vue({
       tasks: '',
       about_isVisible: true,
       contact_isVisible: false,
-      experience_isVisible: false
+      experience_isVisible: false,
+      application_isVisible: false
     }
   },
   computed: {
@@ -47,7 +55,8 @@ const app = new Vue({
     toggle: function() {
        this.about_isVisible = !this.about_isVisible,
        this.contact_isVisible = !this.contact_isVisible,
-       this.experience_isVisible = !this.experience_isVisible
+       this.experience_isVisible = !this.experience_isVisible,
+        this.application_isVisible = !this.application_isVisible
      },
 /*     progressivo: function() {
        if (this.name = true && this.email = true) {
