@@ -57,13 +57,18 @@ const app = new Vue({
         this.contact_isVisible = !this.contact_isVisible,
         this.experience_isVisible = !this.experience_isVisible
       }, */
-      exportPdf: function() {
+
+/*      exportPdf: function() {
        const doc = new jsPDF();
        doc.addHTML(document.getElementById('resumepage'),function() {
     doc.save('nayaca.pdf');
 });
+}, */
 
-     },
+    exportPdf() {
+      const doc = window.print();
+      doc.save('hello.pdf');
+    },
 
     resetResume: function() {
       this.name = '',
