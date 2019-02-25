@@ -27,18 +27,52 @@ const app = new Vue({
       address: '',
       video: '',
       desired_position: '',
-      positiona: '',
-      startdatea: '',
-      enddatea: '',
-      noenda: '',
-      companya: '',
-      locationa: '',
-      tasksa: '',
-      
+      position1: '',
+      company1: '',
+      location1: '',
+      startdate1: '',
+      enddate1: '',
+      noend1: '',
+      tasks1: '',
+      position2: '',
+      company2: '',
+      location2: '',
+      startdate2: '',
+      enddate2: '',
+      noend2: '',
+      tasks2: '',
+      position3: '',
+      company3: '',
+      location3: '',
+      startdate3: '',
+      enddate3: '',
+      noend3: '',
+      tasks3: '',
+      study_s1: '',
+      institution_s1: '',
+      location_s1: '',
+      startdate_s1: '',
+      enddate_s1: '',
+      noend_s1: '',
+      achievements_s1: '',
+      study_s2: '',
+      institution_s2: '',
+      location_s2: '',
+      startdate_s2: '',
+      enddate_s2: '',
+      noend_s2: '',
+      achievements_s2: '',
+      study_s3: '',
+      institution_s3: '',
+      location_s3: '',
+      startdate_s3: '',
+      enddate_s3: '',
+      noend_s3: '',
+      achievements_s3: ''
     }
   },
   computed: {
-    currently: function() {
+/*    currently: function() {
   if (this.current_position && this.current_company && this.current_location) {
     return this.current_position + ' | ' + this.current_company + ' | ' + this.current_location;
   } else if (this.current_position && this.current_company) {
@@ -50,26 +84,127 @@ const app = new Vue({
   } else {
     return this.current_position || this.current_company || this.current_location;
   }
-},
-    perioda() {
-      if (this.startdatea && this.enddatea && this.noenda) {
-        return 'since ' + this.startdatea;
-      } else if (this.startdatea && this.enddatea) {
-        return this.startdatea + ' - ' + this.enddatea;
-      } else if (this.startdatea && this.noenda) {
-        return 'since ' + this.startdatea;
-      } else if (this.enddatea && this.noenda) {
+},*/
+    period1() {
+      if (this.startdate1 && this.enddate1 && this.noend1) {
+        return 'since ' + this.startdate1;
+      } else if (this.startdate1 && this.enddate1) {
+        return this.startdate1 + ' - ' + this.enddate1;
+      } else if (this.startdate1 && this.noend1) {
+        return 'since ' + this.startdate1;
+      } else if (this.enddate1 && this.noend1) {
         return null;
-      } else if (this.startdatea) {
-        return 'since ' + this.startdatea;
-      } else if (this.enddatea) {
-        return 'until ' + this.enddatea;
-      } else if (this.noenda) {
+      } else if (this.startdate1) {
+        return 'since ' + this.startdate1;
+      } else if (this.enddate1) {
+        return 'until ' + this.enddate1;
+      } else if (this.noend1) {
+        return 'I currently work here.';
+      } else {
+        return null;
+      }
+    },
+
+    period2() {
+      if (this.startdate2 && this.enddate2 && this.noend2) {
+        return 'since ' + this.startdate2;
+      } else if (this.startdate2 && this.enddate2) {
+        return this.startdate2 + ' - ' + this.enddate2;
+      } else if (this.startdate2 && this.noend2) {
+        return 'since ' + this.startdate2;
+      } else if (this.enddate2 && this.noend2) {
+        return null;
+      } else if (this.startdate2) {
+        return 'since ' + this.startdate2;
+      } else if (this.enddate2) {
+        return 'until ' + this.enddate2;
+      } else if (this.noend2) {
+        return 'I currently work here.';
+      } else {
+        return null;
+      }
+    },
+
+    period3() {
+      if (this.startdate3 && this.enddate3 && this.noend3) {
+        return 'since ' + this.startdate3;
+      } else if (this.startdate3 && this.enddate3) {
+        return this.startdate3 + ' - ' + this.enddate3;
+      } else if (this.startdate3 && this.noend3) {
+        return 'since ' + this.startdate3;
+      } else if (this.enddate3 && this.noend3) {
+        return null;
+      } else if (this.startdate3) {
+        return 'since ' + this.startdate3;
+      } else if (this.enddate3) {
+        return 'until ' + this.enddate3;
+      } else if (this.noend3) {
+        return 'I currently work here.';
+      } else {
+        return null;
+      }
+    },
+
+    period_s1() {
+      if (this.startdate_s1 && this.enddate_s1 && this.noend_s1) {
+        return 'since ' + this.startdate_s1;
+      } else if (this.startdate_s1 && this.enddate_s1) {
+        return this.startdate_s1 + ' - ' + this.enddate_s1;
+      } else if (this.startdate_s1 && this.noend_s1) {
+        return 'since ' + this.startdate_s1;
+      } else if (this.enddate_s1 && this.noend_s1) {
+        return null;
+      } else if (this.startdate_s1) {
+        return 'since ' + this.startdate_s1;
+      } else if (this.enddate_s1) {
+        return 'until ' + this.enddate_s1;
+      } else if (this.noend_s1) {
+        return 'I currently work here.';
+      } else {
+        return null;
+      }
+    },
+
+    period_s2() {
+      if (this.startdate_s2 && this.enddate_s2 && this.noend_s2) {
+        return 'since ' + this.startdate_s2;
+      } else if (this.startdate_s2 && this.enddate_s2) {
+        return this.startdate_s2 + ' - ' + this.enddate_s2;
+      } else if (this.startdate_s2 && this.noend_s2) {
+        return 'since ' + this.startdate_s2;
+      } else if (this.enddate_s2 && this.noend_s2) {
+        return null;
+      } else if (this.startdate_s2) {
+        return 'since ' + this.startdate_s2;
+      } else if (this.enddate_s2) {
+        return 'until ' + this.enddate_s2;
+      } else if (this.noend_s2) {
+        return 'I currently work here.';
+      } else {
+        return null;
+      }
+    },
+
+    period_s3() {
+      if (this.startdate_s3 && this.enddate_s3 && this.noend_s3) {
+        return 'since ' + this.startdate_s3;
+      } else if (this.startdate_s3 && this.enddate_s3) {
+        return this.startdate_s3 + ' - ' + this.enddate_s3;
+      } else if (this.startdate_s3 && this.noend_s3) {
+        return 'since ' + this.startdate_s3;
+      } else if (this.enddate_s3 && this.noend_s3) {
+        return null;
+      } else if (this.startdate_s3) {
+        return 'since ' + this.startdate_s3;
+      } else if (this.enddate_s3) {
+        return 'until ' + this.enddate_s3;
+      } else if (this.noend_s3) {
         return 'I currently work here.';
       } else {
         return null;
       }
     }
+
   },
   methods: {
 

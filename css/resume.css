@@ -1,5 +1,5 @@
 
-  #signupbutton, #btnabout, #btncontact, #btnapplication, #btnexperience  {
+  #signupbutton, #btnskills, #btnabout, #btncontact, #btnapplication, #btnexperience, #btneducation  {
     background-color: #fff;
     color: #FF6F61;
     border-color: #FF6F61;
@@ -7,10 +7,11 @@
 
   #signupbutton:hover, #signupbutton:focus, #signupbutton:active, #signupbutton.active, .open>.dropdown-toggle#signupbutton,
   #btnabout:hover, #btnabout:focus, #btnabout:active, #btnabout.active, .open>.dropdown-toggle#btnabout,
-  #btnabout:hover, #btnabout:focus, #btnabout:active, #btnabout.active, .open>.dropdown-toggle#btnabout,
+  #btnskills:hover, #btnskills:focus, #btnskills:active, #btnskills.active, .open>.dropdown-toggle#btnskills,
   #btncontact:hover, #btncontact:focus, #btncontact:active, #btncontact.active, .open>.dropdown-toggle#btncontact,
   #btnapplication:hover, #btnapplication:focus, #btnapplication:active, #btnapplication.active, .open>.dropdown-toggle#btnapplication,
-  #btnexperience:hover, #btnexperience:focus, #btnexperience:active, #btnexperience.active, .open>.dropdown-toggle#btnexperience {
+  #btnexperience:hover, #btnexperience:focus, #btnexperience:active, #btnexperience.active, .open>.dropdown-toggle#btnexperience,
+  #btneducation:hover, #btneducation:focus, #btneducation:active, #btneducation.active, .open>.dropdown-toggle#btneducation {
     background-color: #FF6F61;
     color: #fff;
     border-color: #FF6F61;
@@ -49,7 +50,7 @@
   padding: 0;
 }
 
-#app {
+#resumebuilder {
   padding-top: 120px;
 }
 
@@ -75,7 +76,7 @@
     margin-top: 15px;
     margin-left: -11px;
   }
-  #app {
+  #resumebuilder {
     padding-top: 70px;
   }
 }
@@ -159,8 +160,14 @@ h7 {
   text-align: center;
 }
 
-#experience_icon, #education_icon {
+#experience_headline, #education_headline {
   text-align: center;
+  color: #FF6F61;
+  line-height: 1.5;
+}
+
+#study_s1, #study_s2, #study_s3, #position1, #position2, #position3 {
+  color: #FF6F61;
 }
 
 /* styling placeholder: */
@@ -295,16 +302,16 @@ h7 {
 
 h7 {
   font-size: 100px;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1em;
 }
 
 h1 {
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1em;
   font-weight: bold;
 }
 
 h4 {
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1em;
 }
 
 #mainheadline {
@@ -340,7 +347,7 @@ h4 {
   margin-top: -top: 50px;
   margin-bottom: 50px;
   text-align: center;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   word-spacing: 0.25rem;
   line-height: 1.5;
   font-weight: bold;
@@ -374,14 +381,14 @@ h4 {
   text-align: center;
   color: black;
   font-weight: bold;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1em;
 }
 
 .resumes h5 {
   padding-bottom: 20px;;
   text-align: center;
   color: black;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1em;
 }
 
 .resumes h3 {

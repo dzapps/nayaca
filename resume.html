@@ -20,7 +20,7 @@
 
   </head>
   <body>
-
+<div id="app">
     <div class="container-fluid">
       <div class="row" id="resumeheader">
 
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="container" id="app">
+    <div class="container" id="resumebuilder">
       <div class="row">
         <div class="col-md-4">
           <form>
@@ -65,6 +65,14 @@
                 <br>
                 <input type="text" value="degree" class="form-control" placeholder="My degree" v-model="degree">
                 <br>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <b-button href="#" v-b-toggle.accordion2 class="btn btn-sm btn-block" variant="outline-dark" id="btnskills">SKILLS</b-button>
+              <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
+              <div id="skills_box">
+                <br>
                 <input type="text" value="languages" class="form-control" placeholder="My languages" v-model="languages">
                 <br>
                 <input type="text" value="coding" class="form-control" placeholder="My coding" v-model="coding">
@@ -79,8 +87,8 @@
             </div>
 
             <div class="form-group">
-              <b-button href="#" v-b-toggle.accordion2 class="btn btn-sm btn-block" variant="outline-dark" id="btncontact" >CONTACT</b-button>
-              <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
+              <b-button href="#" v-b-toggle.accordion3 class="btn btn-sm btn-block" variant="outline-dark" id="btncontact" >CONTACT</b-button>
+              <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
               <div id="contact_box">
                 <br>
                 <input type="text" value="email" class="form-control" placeholder="My email" v-model="email">
@@ -100,8 +108,8 @@
 
 
             <div class="form-group">
-              <b-button href="#" v-b-toggle.accordion3 class="btn btn-sm btn-block" variant="outline-dark" id="btnapplication">APPLICATION</b-button>
-              <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
+              <b-button href="#" v-b-toggle.accordion4 class="btn btn-sm btn-block" variant="outline-dark" id="btnapplication">APPLICATION</b-button>
+              <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel">
               <div id="application_box">
                 <br>
                 <input type="text" value="desired_position" class="form-control" placeholder="Desired position" v-model="desired_position">
@@ -112,30 +120,121 @@
 
             <div class="form-group">
 
-              <b-button href="#" v-b-toggle.accordion4 class="btn btn-sm btn-block" variant="outline-dark" id="btnexperience">EXPERIENCE</b-button>
-              <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel">
-              <div id="experience_box">
+              <b-button href="#" v-b-toggle.accordion5 class="btn btn-sm btn-block" variant="outline-dark" id="btnexperience">EXPERIENCE</b-button>
+              <b-collapse id="accordion5" accordion="my-accordion" role="tabpanel">
+              <div id="experience_box1">
                 <br>
-                <input type="text" value="position1" class="form-control" placeholder="Position" v-model="positiona">
+                <input type="text" value="position" class="form-control" placeholder="Position" v-model="position1">
                 <br>
-                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdatea">
+                <input type="text" value="company" class="form-control" placeholder="Company" v-model="company1">
                 <br>
-                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddatea">
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location1">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noenda">
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate1">
                 <br>
-                <input type="text" value="company" class="form-control" placeholder="Company" v-model="companya">
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate1">
                 <br>
-                <input type="text" value="location" class="form-control" placeholder="Location" v-model="locationa">
+                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend1">
                 <br>
-                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasksa"></textarea>
+                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks1"></textarea>
+              </div>
+
+              <div id="experience_box2">
+                <br>
+                <input type="text" value="position" class="form-control" placeholder="Position" v-model="position2">
+                <br>
+                <input type="text" value="company" class="form-control" placeholder="Company" v-model="company2">
+                <br>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location2">
+                <br>
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate2">
+                <br>
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate2">
+                <br>
+                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend2">
+                <br>
+                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks2"></textarea>
+              </div>
+
+              <div id="experience_box3">
+                <br>
+                <input type="text" value="position" class="form-control" placeholder="Position" v-model="position3">
+                <br>
+                <input type="text" value="company" class="form-control" placeholder="Company" v-model="company3">
+                <br>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location3">
+                <br>
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate3">
+                <br>
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate3">
+                <br>
+                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend3">
+                <br>
+                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks3"></textarea>
               </div>
             </b-collapse>
             </div>
+
+            <div class="form-group">
+
+              <b-button href="#" v-b-toggle.accordion5 class="btn btn-sm btn-block" variant="outline-dark" id="btneducation">EDUCATION</b-button>
+              <b-collapse id="accordion5" accordion="my-accordion" role="tabpanel">
+              <div id="education_box1">
+                <br>
+                <input type="text" value="study" class="form-control" placeholder="Study" v-model="study_s1">
+                <br>
+                <input type="text" value="institution" class="form-control" placeholder="Institution" v-model="institution_s1">
+                <br>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location_s1">
+                <br>
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate_s1">
+                <br>
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s1">
+                <br>
+                <input type="text" value="noend" class="form-control" placeholder="I currently study here" v-model="noend_s1">
+                <br>
+                <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s1"></textarea>
+              </div>
+
+              <div id="education_box2">
+                <br>
+                <input type="text" value="study" class="form-control" placeholder="Study" v-model="study_s2">
+                <br>
+                <input type="text" value="institution" class="form-control" placeholder="Institution" v-model="institution_s2">
+                <br>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location_s2">
+                <br>
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate_s2">
+                <br>
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s2">
+                <br>
+                <input type="text" value="noend" class="form-control" placeholder="I currently study here" v-model="noend_s2">
+                <br>
+                <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s2"></textarea>
+              </div>
+
+              <div id="education_box3">
+                <br>
+                <input type="text" value="study" class="form-control" placeholder="Study" v-model="study_s3">
+                <br>
+                <input type="text" value="institution" class="form-control" placeholder="Institution" v-model="institution_s3">
+                <br>
+                <input type="text" value="location" class="form-control" placeholder="Location" v-model="location_s3">
+                <br>
+                <input type="text" value="start" class="form-control" placeholder="Start MM.YYYY" v-model="startdate_s3">
+                <br>
+                <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s3">
+                <br>
+                <input type="text" value="noend" class="form-control" placeholder="I currently study here" v-model="noend_s3">
+                <br>
+                <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s3"></textarea>
+              </div>
+            </b-collapse>
+            </div>
+
             <br>
           </form>
         </div>
-
 
 <!-- Bootstrap example classes from here
 
@@ -297,50 +396,228 @@ Bootstrap example classes till here -->
             <div class="row">
 
               <div class="col-md-6">
-                <div id="experience_icon">
-                  <img src="./assets/media/icons/experience.png" height="24px">
+                <div id="experience_headline">
+                  <h6 v-if="position1">EXPERIENCE</h6>
                 </div>
                 <br>
 
-                <div>
-                  <h6>{{ positiona }}</h6>
-                </div>
+                <div id="experience1">
+                  <div id="position1">
+                    <h6>{{ position1 }}</h6>
+                  </div>
 
-                <div>
-                <span class="inliner">
-                  <img src="./assets/media/icons/calendar.png" height="19px" v-if="startdatea || enddatea || noenda">
-                  <h6>&nbsp;{{ perioda }}</h6>
-                </span>
-                </div>
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/company_black.png" height="19px" v-if="company1">
+                      <h6>&nbsp;{{ company1 }}</h6>
+                    </span>
+                  </div>
 
-                <div>
-                <span class="inliner">
-                  <img src="./assets/media/icons/company.png" height="19px" v-if="companya">
-                  <h6>&nbsp;{{ companya }}</h6>
-                </span>
-                </div>
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location1">
+                      <h6>&nbsp;{{ location1 }}</h6>
+                    </span>
+                  </div>
 
-                <div>
-                <span class="inliner">
-                  <img src="./assets/media/icons/location.png" height="19px" v-if="locationa">
-                  <h6>&nbsp;{{ locationa }}</h6>
-                </span>
-                </div>
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate1 || enddate1 || noend1">
+                      <h6>&nbsp;{{ period1 }}</h6>
+                    </span>
+                  </div>
 
-                <div>
-                <span class="inliner">
-                  <img src="./assets/media/icons/tasks.png" height="19px" v-if="tasksa">
-                  <h6>&nbsp;{{ tasksa }}</h6>
-                </span>
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/tasks_black.png" height="19px" v-if="tasks1">
+                      <h6>&nbsp;{{ tasks1 }}</h6>
+                    </span>
+                  </div>
                 </div>
+                <br>
+                <div id="experience2">
+                  <div id="position2">
+                    <h6>{{ position2 }}</h6>
+                  </div>
 
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/company_black.png" height="19px" v-if="company2">
+                      <h6>&nbsp;{{ company2 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location2">
+                      <h6>&nbsp;{{ location2 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate2 || enddate2 || noend2">
+                      <h6>&nbsp;{{ period2 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/tasks_black.png" height="19px" v-if="tasks2">
+                      <h6>&nbsp;{{ tasks2 }}</h6>
+                    </span>
+                  </div>
+                </div>
+                <br>
+                <div id="experience3">
+                  <div id="position3">
+                    <h6>{{ position3 }}</h6>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/company_black.png" height="19px" v-if="company3">
+                      <h6>&nbsp;{{ company3 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location3">
+                      <h6>&nbsp;{{ location3 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate3 || enddate3 || noend3">
+                      <h6>&nbsp;{{ period3 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/tasks_black.png" height="19px" v-if="tasks3">
+                      <h6>&nbsp;{{ tasks3 }}</h6>
+                    </span>
+                  </div>
+                </div>
+                <br>
               </div>
+
+
+
 
               <div class="col-md-6">
-                <div id="education_icon">
-                  <img src="./assets/media/icons/education.png" height="24px">
+                <div id="education_headline">
+                  <h6 v-if="study_s1">EDUCATION</h6>
                 </div>
+                <br>
+
+                <div id="education1">
+                  <div id="study_s1">
+                    <h6>{{ study_s1 }}</h6>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/institution.png" height="19px" v-if="institution_s1">
+                      <h6>&nbsp;{{ institution_s1 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location_s1">
+                      <h6>&nbsp;{{ location_s1 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate_s1 || enddate_s1 || noend_s1">
+                      <h6>&nbsp;{{ period_s1 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/achievements.png" height="19px" v-if="achievements_s1">
+                      <h6>&nbsp;{{ achievements_s1 }}</h6>
+                    </span>
+                  </div>
+                </div>
+                <br>
+                <div id="education2">
+                  <div id="study_s2">
+                    <h6>{{ study_s2 }}</h6>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/institution.png" height="19px" v-if="institution_s2">
+                      <h6>&nbsp;{{ institution_s2 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location_s2">
+                      <h6>&nbsp;{{ location_s2 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate_s2 || enddate_s2 || noend_s2">
+                      <h6>&nbsp;{{ period_s2 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/achievements.png" height="19px" v-if="achievements_s2">
+                      <h6>&nbsp;{{ achievements_s2 }}</h6>
+                    </span>
+                  </div>
+                </div>
+                <br>
+                <div id="education3">
+                  <div id="study_s3">
+                    <h6>{{ study_s3 }}</h6>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/institution.png" height="19px" v-if="institution_s3">
+                      <h6>&nbsp;{{ institution_s3 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location_s3">
+                      <h6>&nbsp;{{ location_s3 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate_s3 || enddate_s3 || noend_s3">
+                      <h6>&nbsp;{{ period_s3 }}</h6>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span class="inliner">
+                      <img src="./assets/media/icons/achievements.png" height="19px" v-if="achievements_s3">
+                      <h6>&nbsp;{{ achievements_s3 }}</h6>
+                    </span>
+                  </div>
+                </div>
+                <br>
               </div>
+
             </div>
           </div>
           </div>
@@ -371,7 +648,7 @@ Bootstrap example classes till here -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
 <script src="/script.js"></script>
-
+</div>
   </body>
 </html>
 
