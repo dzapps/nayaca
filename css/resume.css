@@ -1,58 +1,23 @@
-@import '404.css';
 
-/* NEWLY INTRODUCED BUTTON BTN-PANTONE and BTN-OUTLINE-PANTONE!!! */
+  #signupbutton, #btnabout, #btncontact, #btnapplication, #btnexperience  {
+    background-color: #fff;
+    color: #FF6F61;
+    border-color: #FF6F61;
+    }
 
-.btn-pantone {
-  color: #fff;
-  background-color: #FF6F61;
-  border-color: #fff; }
-.btn-pantone:hover {
-  color: #FF6F61;
-  background-color: #fff;
-  border-color: #FF6F61; }
-.btn-pantone:focus, .btn-pantone.focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5); }
-.btn-pantone.disabled, .btn-pantone:disabled {
-  color: #fff;
-  background-color: #FF6F61;
-  border-color: #FF6F61; }
-.btn-pantone:not(:disabled):not(.disabled):active, .btn-pantone:not(:disabled):not(.disabled).active,
-.show > .btn-dpantone.dropdown-toggle {
-  color: #fff;
-  background-color: #FF6F61;
-  border-color: #FF6F61; }
-.btn-pantone:not(:disabled):not(.disabled):active:focus, .btn-pantone:not(:disabled):not(.disabled).active:focus,
-.show > .btn-pantone.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5); }
+  #signupbutton:hover, #signupbutton:focus, #signupbutton:active, #signupbutton.active, .open>.dropdown-toggle#signupbutton,
+  #btnabout:hover, #btnabout:focus, #btnabout:active, #btnabout.active, .open>.dropdown-toggle#btnabout,
+  #btnabout:hover, #btnabout:focus, #btnabout:active, #btnabout.active, .open>.dropdown-toggle#btnabout,
+  #btncontact:hover, #btncontact:focus, #btncontact:active, #btncontact.active, .open>.dropdown-toggle#btncontact,
+  #btnapplication:hover, #btnapplication:focus, #btnapplication:active, #btnapplication.active, .open>.dropdown-toggle#btnapplication,
+  #btnexperience:hover, #btnexperience:focus, #btnexperience:active, #btnexperience.active, .open>.dropdown-toggle#btnexperience {
+    background-color: #FF6F61;
+    color: #fff;
+    border-color: #FF6F61;
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5);
+    }
 
-
-
-.btn-outline-pantone {
-  color: #FF6F61;
-  border-color: #FF6F61; }
-.btn-outline-pantone:hover {
-  color: #fff;
-  background-color: #FF6F61;
-  border-color: #FF6F61; }
-.btn-outline-pantone:focus, .btn-outline-pantone.focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5); }
-.btn-outline-pantone.disabled, .btn-outline-pantone:disabled {
-  color: #FF6F61;
-  background-color: transparent; }
-.btn-outline-pantone:not(:disabled):not(.disabled):active, .btn-outline-pantone:not(:disabled):not(.disabled).active,
-.show > .btn-outline-pantone.dropdown-toggle {
-  color: #fff;
-  background-color: #FF6F61;
-  border-color: #FF6F61; }
-.btn-outline-pantone:not(:disabled):not(.disabled):active:focus, .btn-outline-pantone:not(:disabled):not(.disabled).active:focus,
-.show > .btn-outline-pantone.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5); }
-
-.bg-pantone {
-    background-color: #FF6F61 !important;
-  }
-
-  #brandimage {
+#brandimage {
     width: 100px;
     height: 100px;
   }
@@ -60,7 +25,7 @@
   text-align: right;
 }
 
-#SignUpButton {
+#signupbutton {
   margin-top: 57px;
   }
 
@@ -106,7 +71,7 @@
     margin-top: 35px;
     font-size: 0.5em;
   }
-  #SignUpButton {
+  #signupbutton {
     margin-top: 15px;
     margin-left: -11px;
   }
@@ -304,15 +269,6 @@ h7 {
   }
 
 
-/*
-.navbar-collapse a {
-  text-align: right;
-  padding-top: 0px;
-}*/
-
-
-
-
 .navbar-toggler, .navbar-toggler:hover, .navbar-toggler:active {
   border: none;
   padding: 0;
@@ -325,18 +281,6 @@ h7 {
   color: #FF6F61 !important;
   padding-top: 0px !important;
 }
-
-/* .container {
-  width: 50%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-} */
 
 .nav-item .dropdown-item img {
   color: #FF6F61 !important;
@@ -381,6 +325,7 @@ h4 {
   padding-top: 100px;
   line-height: 1;
 } */
+
 #nayacatext{display: inline-block; text-transform: uppercase;}
 #nayacalogo{display: none;}
 }
@@ -402,87 +347,6 @@ h4 {
   color: white;
 }
 
-
-
-.efs img {
-  filter: invert(100%);
-  text-shadow: 2px 2px black;
-}
-/*
-.col-sm {
-     text-align: center;
-} */
-
-.gotoresume {
-  text-align: center;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.25rem;
-  font-weight: bold;
-  color: white;
-  margin: 100px auto 200px auto;
-}
-
-#urch {
-  letter-spacing: 0.1rem;
-  word-spacing: 0.25rem;
-  font-weight: bold;
-}
-
-/* #resume-icon {
-  padding-bottom: 50px;
-} */
-
-.resumesheadline {
-  margin-bottom: 50px;
-  text-align: center;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.25rem;
-  line-height: 1.5;
-  font-weight: bold;
-  color: black;
-}
-
-.resumebox {
-  padding: 20px;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 20px;
-  color: black;
-}
-
-.resumebox span {
-  display: inline-block;
-}
-
-.resumebox h5 {
-  font-weight: bold;
-}
-
-.resumebox p {
-  line-height: 1.5;
-}
-
-.blogbox {
-  padding: 20px;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 20px;
-  color: black;
-}
-
-.latestblogbox {
-  padding: 20px;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 20px;
-  color: black;
-  background-color: white;
-}
-
-.blogbox h6, .latestblogbox h6 {
-  color: #FF6F61;
-  text-align: right;
-}
 
 .flex-item {
   display: flex;

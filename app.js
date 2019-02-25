@@ -1,6 +1,9 @@
+
+
 const app = new Vue({
   el:'#app',
   data() {
+
     return {
       name: '',
       current_position: '',
@@ -31,10 +34,7 @@ const app = new Vue({
       companya: '',
       locationa: '',
       tasksa: '',
-      about_isVisible: true,
-      contact_isVisible: false,
-      experience_isVisible: false,
-      application_isVisible: false
+      
     }
   },
   computed: {
@@ -72,12 +72,7 @@ const app = new Vue({
     }
   },
   methods: {
-    toggle: function() {
-       this.about_isVisible = !this.about_isVisible,
-       this.contact_isVisible = !this.contact_isVisible,
-       this.experience_isVisible = !this.experience_isVisible,
-        this.application_isVisible = !this.application_isVisible
-     },
+
 /*     progressivo: function() {
        if (this.name = true && this.email = true) {
          return

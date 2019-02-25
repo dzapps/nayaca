@@ -8,8 +8,16 @@
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/css/resume.css">
     <title>Nayaca</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <!-- start: Bootstrap-Vue https://bootstrap-vue.js.org/docs -->
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+    <script src="//unpkg.com/@babel/polyfill@latest/dist/polyfill.min.js"></script>
+    <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <!-- end: Bootstrap-Vue -->
     <script src="./app.js" defer></script>
+
+
   </head>
   <body>
 
@@ -32,23 +40,20 @@
                 </div>
 
         <div class="col-3" id="SignUpCol">
-          <button type="button" class="btn btn-sm btn-pantone" id="SignUpButton"
-          href="#" @click="toggle"><nobr id="SignUpButtonTag">Sign Up</nobr></button>
+          <button type="button" class="btn btn-sm" id="signupbutton"
+          href="#"><nobr>Sign Up</nobr></button>
         </div>
       </div>
     </div>
-
-
-
-
 
     <div class="container" id="app">
       <div class="row">
         <div class="col-md-4">
           <form>
             <div class="form-group">
-              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">ABOUT</button>
-              <div id="about_box" v-if="about_isVisible">
+              <b-button href="#" v-b-toggle.accordion1 class="btn btn-sm btn-block" variant="outline-dark" id="btnabout">ABOUT</b-button>
+              <b-collapse id="accordion1" accordion="my-accordion" role="tabpanel">
+              <div id="about_box">
                 <br>
                 <input type="text" value="name" class="form-control" placeholder="My name" v-model="name">
                 <br>
@@ -74,8 +79,9 @@
             </div>
 
             <div class="form-group">
-              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">CONTACT</button>
-              <div id="contact_box" v-if="contact_isVisible">
+              <b-button href="#" v-b-toggle.accordion2 class="btn btn-sm btn-block" variant="outline-dark" id="btncontact" >CONTACT</b-button>
+              <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
+              <div id="contact_box">
                 <br>
                 <input type="text" value="email" class="form-control" placeholder="My email" v-model="email">
                 <br>
@@ -89,21 +95,26 @@
                 <br>
                 <input type="text" value="video" class="form-control" placeholder="My application video" v-model="video">
               </div>
+            </b-collapse>
             </div>
-            <br>
+
 
             <div class="form-group">
-              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">APPLICATION</button>
-              <div id="application_box" v-if="application_isVisible">
+              <b-button href="#" v-b-toggle.accordion3 class="btn btn-sm btn-block" variant="outline-dark" id="btnapplication">APPLICATION</b-button>
+              <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
+              <div id="application_box">
                 <br>
                 <input type="text" value="desired_position" class="form-control" placeholder="Desired position" v-model="desired_position">
               </div>
+            </b-collapse>
             </div>
-            <br>
+
 
             <div class="form-group">
-              <button type="button" class="btn btn-sm btn-block btn-outline-pantone" @click="toggle">EXPERIENCE</button>
-              <div id="experience_box" v-if="experience_isVisible">
+
+              <b-button href="#" v-b-toggle.accordion4 class="btn btn-sm btn-block" variant="outline-dark" id="btnexperience">EXPERIENCE</b-button>
+              <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel">
+              <div id="experience_box">
                 <br>
                 <input type="text" value="position1" class="form-control" placeholder="Position" v-model="positiona">
                 <br>
@@ -119,6 +130,7 @@
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasksa"></textarea>
               </div>
+            </b-collapse>
             </div>
             <br>
           </form>
@@ -336,7 +348,7 @@ Bootstrap example classes till here -->
         <hr>
         <div class="row">
           <div class="col signupResume">
-            <button type="button" class="btn btn-sm btn-pantone" @click="toggle">Sign Up</button>
+            <button type="button" class="btn btn-sm btn-pantone">Sign Up</button>
             <span>*</span>
            </div>
            <div class="col pdf-reset">
@@ -354,9 +366,11 @@ Bootstrap example classes till here -->
       </div>
     </div>
 
+<!-- start: jsPDF https://parall.ax/products/jspdf -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-    <script src="/script.js"></script>
+
+<script src="/script.js"></script>
 
   </body>
 </html>
@@ -402,7 +416,7 @@ Bootstrap example classes till here -->
       <h2>{{ firstname }} {{ lastname }}</h2>
     </div>
 
-  <!--    <div class="container">
+     <div class="container">
 
         <div class="resume-name"><span><h2>{{person.name}}</h2></span>
         </div>
