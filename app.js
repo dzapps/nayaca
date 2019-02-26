@@ -67,6 +67,12 @@ const app = new Vue({
       enddate_s3: '',
       noend_s3: false,
       achievements_s3: '',
+      btnpressed1: false,
+      btnpressed2: false,
+      btnpressed3: false,
+      btnpressed_s1: false,
+      btnpressed_s2: false,
+      btnpressed_s3: false,
       max: 100,
       valuebar: 10
   },

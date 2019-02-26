@@ -130,7 +130,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate1">
                 <br>
-                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="iworkhere1">I currently work here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed1" variant="outline-secondary" @click="iworkhere1">I currently work here</b-button>
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks1"></textarea>
               </div>
@@ -147,7 +147,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate2">
                 <br>
-                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="iworkhere2">I currently work here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed2" variant="outline-secondary" variant="outline-success" @click="iworkhere2">I currently work here</b-button>
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks2"></textarea>
               </div>
@@ -164,7 +164,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate3">
                 <br>
-                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="iworkhere3">I currently work here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed3" variant="outline-secondary" variant="outline-success" @click="iworkhere3">I currently work here</b-button>
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks3"></textarea>
               </div>
@@ -187,7 +187,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s1">
                 <br>
-                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="istudyhere1">I currently study here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s1" variant="outline-secondary" variant="outline-success" @click="istudyhere1">I currently study here</b-button>
                 <br>
                 <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s1"></textarea>
               </div>
@@ -204,7 +204,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s2">
                 <br>
-                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="istudyhere2">I currently study here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s2" variant="outline-secondary" variant="outline-success" @click="istudyhere2">I currently study here</b-button>
                 <br>
                 <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s2"></textarea>
               </div>
@@ -221,7 +221,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s3">
                 <br>
-                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="istudyhere3">I currently study here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s3" variant="outline-secondary" variant="outline-success" @click="istudyhere3">I currently study here</b-button>
                 <br>
                 <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s3"></textarea>
               </div>
