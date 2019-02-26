@@ -21,8 +21,8 @@
   </head>
   <body>
 <div id="app">
-    <div class="container-fluid">
-      <div class="row" id="resumeheader">
+    <div class="container-fluid" id="resumeheader">
+      <div class="row">
 
          <div class="col-3" id="BrandCol">
              <a class="navbar-brand" href="index.html">
@@ -60,7 +60,7 @@
                 <input type="text" value="current_location" class="form-control" placeholder="My current location" v-model="current_location">
                 <br>
                 <input type="text" value="degree" class="form-control" placeholder="My degree" v-model="degree">
-                <br>
+
               </div>
             </div>
 
@@ -71,14 +71,14 @@
                 <br>
                 <input type="text" value="languages" class="form-control" placeholder="My languages" v-model="languages">
                 <br>
-                <input type="text" value="coding" class="form-control" placeholder="My coding" v-model="coding">
+                <input type="text" value="coding" class="form-control" placeholder="My programming skills" v-model="coding">
                 <br>
                 <input type="text" value="accomplishment" class="form-control" placeholder="My greatest accomplishment" v-model="accomplishment">
                 <br>
                 <textarea type="text" value="about_me" class="form-control" rows="3" placeholder="About me" v-model="about_me"></textarea>
                 <br>
                 <input type="text" value="salary" class="form-control" placeholder="My salary expectations" v-model="salary">
-                <br>
+
               </div>
             </div>
 
@@ -130,13 +130,13 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate1">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend1">
+                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="iworkhere1">I currently work here</b-button>
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks1"></textarea>
               </div>
-
+              <hr class="hr">
               <div id="experience_box2">
-                <br>
+
                 <input type="text" value="position" class="form-control" placeholder="Position" v-model="position2">
                 <br>
                 <input type="text" value="company" class="form-control" placeholder="Company" v-model="company2">
@@ -147,13 +147,13 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate2">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend2">
+                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="iworkhere2">I currently work here</b-button>
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks2"></textarea>
               </div>
-
+              <hr class="hr">
               <div id="experience_box3">
-                <br>
+
                 <input type="text" value="position" class="form-control" placeholder="Position" v-model="position3">
                 <br>
                 <input type="text" value="company" class="form-control" placeholder="Company" v-model="company3">
@@ -164,7 +164,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate3">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently work here" v-model="noend3">
+                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="iworkhere3">I currently work here</b-button>
                 <br>
                 <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks3"></textarea>
               </div>
@@ -173,8 +173,8 @@
 
             <div class="form-group">
 
-              <b-button href="#" v-b-toggle.accordion5 class="btn btn-sm btn-block" variant="outline-dark" id="btneducation">EDUCATION</b-button>
-              <b-collapse id="accordion5" accordion="my-accordion" role="tabpanel">
+              <b-button href="#" v-b-toggle.accordion6 class="btn btn-sm btn-block" variant="outline-dark" id="btneducation">EDUCATION</b-button>
+              <b-collapse id="accordion6" accordion="my-accordion" role="tabpanel">
               <div id="education_box1">
                 <br>
                 <input type="text" value="study" class="form-control" placeholder="Study" v-model="study_s1">
@@ -187,11 +187,11 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s1">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently study here" v-model="noend_s1">
+                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="istudyhere1">I currently study here</b-button>
                 <br>
                 <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s1"></textarea>
               </div>
-
+              <hr class="hr">
               <div id="education_box2">
                 <br>
                 <input type="text" value="study" class="form-control" placeholder="Study" v-model="study_s2">
@@ -204,11 +204,11 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s2">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently study here" v-model="noend_s2">
+                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="istudyhere2">I currently study here</b-button>
                 <br>
                 <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s2"></textarea>
               </div>
-
+              <hr class="hr">
               <div id="education_box3">
                 <br>
                 <input type="text" value="study" class="form-control" placeholder="Study" v-model="study_s3">
@@ -221,7 +221,7 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s3">
                 <br>
-                <input type="text" value="noend" class="form-control" placeholder="I currently study here" v-model="noend_s3">
+                <b-button class="btn btn-sm btn-block" variant="outline-success" @click="istudyhere3">I currently study here</b-button>
                 <br>
                 <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s3"></textarea>
               </div>
