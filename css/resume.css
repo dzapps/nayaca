@@ -18,10 +18,29 @@
     box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5);
     }
 
+#resumeheader {
+      background: linear-gradient(90deg, #FF6F61, #fff);
+    }
+
 #brandimage {
     width: 100px;
     height: 100px;
   }
+
+#progress {
+    padding: 0;
+    margin-top: 0px;
+    height: 12px;
+    font-size: 8px;
+    font-weight: bold;
+  }
+
+#progressive {
+    width: 0%;
+    color: white;
+    background-color: #7e61ff;
+  }
+
 #SignUpCol {
   text-align: right;
 }
@@ -39,16 +58,8 @@
   z-index: 10;
 }
 
-#progressive {
-  width: 0%;
-  color: black;
-}
 
-#progress {
-  height: 20px;
-  margin-top: 66px;
-  padding: 0;
-}
+
 
 #resumebuilder {
   padding-top: 120px;

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="/assets/media/shortcutIcon.ico">
+    <link rel="shortcut icon" href="/assets/media/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/css/resume.css">
     <title>Nayaca</title>
@@ -24,27 +24,23 @@
     <div class="container-fluid">
       <div class="row" id="resumeheader">
 
-        <div class="col-3" id="BrandCol">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/media/nayaca-pantone-logo.png" alt="Nayaca" id="brandimage">
-          </a>
-        </div>
+         <div class="col-3" id="BrandCol">
+             <a class="navbar-brand" href="index.html">
+                 <img src="assets/media/nayaca-white-logo.png" alt="Nayaca" id="brandimage">
+             </a>
+         </div>
 
+          <div class="col-6">
+                <b-progress class="mb-3"  show-progress animated min-width id="progress" >
+                  <b-progress-bar :max="max" :value="valuebar"  id="progressive" />
+                </b-progress>
+          </div>
 
-                <div class="col-6" id="ProgressCol">
-                  <div class="progress" id="progress">
-                    <div class="progress-bar bg-pantone progress-bar-striped progress-bar-animated" id="progressive" role="progressbar"
-                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">&nbsp;&nbsp;&nbsp;0%
-                    </div>
-                  </div>
-                </div>
-
-        <div class="col-3" id="SignUpCol">
-          <button type="button" class="btn btn-sm" id="signupbutton"
-          href="#"><nobr>Sign Up</nobr></button>
-        </div>
-      </div>
+          <div class="col-3" id="SignUpCol">
+              <b-button type="button" class="btn" size="sm" id="signupbutton"href="#"><nobr>Sign Up</nobr></b-button>
+          </div>
     </div>
+  </div>
 
     <div class="container" id="resumebuilder">
       <div class="row">

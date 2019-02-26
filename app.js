@@ -68,7 +68,9 @@ const app = new Vue({
       startdate_s3: '',
       enddate_s3: '',
       noend_s3: '',
-      achievements_s3: ''
+      achievements_s3: '',
+      max: 100,
+      valuebar: 10,
     }
   },
   computed: {
