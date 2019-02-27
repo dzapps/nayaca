@@ -24,20 +24,20 @@
     <div class="container-fluid" id="resumeheader">
       <div class="row">
 
-         <div class="col-3" id="BrandCol">
-             <a class="navbar-brand" href="index.html">
-                 <img src="assets/media/nayaca-white-logo.png" alt="Nayaca" id="brandimage">
-             </a>
-         </div>
+          <div class="col-3" id="BrandCol">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/media/nayaca-white-logo.png" alt="Nayaca" id="brandimage">
+                </a>
+          </div>
 
           <div class="col-6">
-                <b-progress class="mb-3"  show-progress animated min-width id="progress" >
-                  <b-progress-bar :max="max" :value="valuebar"  id="progressive" />
+                <b-progress class="mb-3" show-value  animated min-width id="progress" >
+                  <b-progress-bar :max="maxbar" :value="valuebar"  id="progressive" />{{ valuebar }}%
                 </b-progress>
           </div>
 
           <div class="col-3" id="SignUpCol">
-              <b-button type="button" class="btn" size="sm" id="signupbutton"href="#"><nobr>Sign Up</nobr></b-button>
+                <b-button type="button" class="btn" size="sm" id="signupbutton"href="#"><nobr>Sign Up</nobr></b-button>
           </div>
     </div>
   </div>
@@ -45,39 +45,44 @@
     <div class="container" id="resumebuilder">
       <div class="row">
         <div class="col-md-4">
-          <form>
-            <div class="form-group">
+          <b-form>
+            <b-form-group>
               <b-button href="#" v-b-toggle.accordion1 class="btn btn-sm btn-block" variant="outline-dark" id="btnabout">ABOUT</b-button>
               <b-collapse id="accordion1" accordion="my-accordion" role="tabpanel">
               <div id="about_box">
                 <br>
-                <input type="text" value="name" class="form-control" placeholder="My name" v-model="name">
+                <b-form-input type="text" id="name" placeholder="My name" v-model="name" @focus="checkCompleted" required >
+                </b-form-input>
                 <br>
-                <input type="text" value="current_position" class="form-control" placeholder="My current position" v-model="current_position">
+                <b-form-input type="text" id="current_position" placeholder="My current position" v-model="current_position"  @focus="checkCompleted" required >
+                </b-form-input>
                 <br>
-                <input type="text" value="current_company" class="form-control" placeholder="My current company" v-model="current_company">
+                <b-form-input type="text" id="current_company" placeholder="My current company" v-model="current_company" @focus="checkCompleted" required />
+                </b-form-input>
                 <br>
-                <input type="text" value="current_location" class="form-control" placeholder="My current location" v-model="current_location">
+                <b-form-input type="text" id="current_location"  placeholder="My current location" v-model="current_location" @focus="checkCompleted" required />
+                </b-form-input>
                 <br>
-                <input type="text" value="degree" class="form-control" placeholder="My degree" v-model="degree">
-
+                <b-form-input type="text" id="degree" placeholder="My degree" v-model="degree" @focus="checkCompleted" required />
+                </b-form-input>
               </div>
-            </div>
+            </b-form-group>
+
 
             <div class="form-group">
               <b-button href="#" v-b-toggle.accordion2 class="btn btn-sm btn-block" variant="outline-dark" id="btnskills">SKILLS</b-button>
               <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
               <div id="skills_box">
                 <br>
-                <input type="text" value="languages" class="form-control" placeholder="My languages" v-model="languages">
+                <input type="text" value="languages" class="form-control" placeholder="My languages" v-model="languages" >
                 <br>
-                <input type="text" value="coding" class="form-control" placeholder="My programming skills" v-model="coding">
+                <input type="text" value="coding" class="form-control" placeholder="My programming skills" v-model="coding" >
                 <br>
                 <input type="text" value="accomplishment" class="form-control" placeholder="My greatest accomplishment" v-model="accomplishment">
                 <br>
-                <textarea type="text" value="about_me" class="form-control" rows="3" placeholder="About me" v-model="about_me"></textarea>
+                <textarea type="text" value="about_me" class="form-control" rows="3" placeholder="About me" v-model="about_me" ></textarea>
                 <br>
-                <input type="text" value="salary" class="form-control" placeholder="My salary expectations" v-model="salary">
+                <input type="text" value="salary" class="form-control" placeholder="My salary expectations" v-model="salary" >
 
               </div>
             </div>
@@ -229,7 +234,7 @@
             </div>
 
             <br>
-          </form>
+          </b-form>
         </div>
 
 <!-- Bootstrap example classes from here
@@ -644,6 +649,10 @@ Bootstrap example classes till here -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
 <script src="/script.js"></script>
+<!-- Vue-focus: A reusable focus directive for reusable Vue.js components. JQuery for the use of "$" -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.rawgit.com/simplesmiler/vue-focus/0.1.2/dist/vue-focus.js"></script>
+
 </div>
   </body>
 </html>

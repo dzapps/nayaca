@@ -73,8 +73,11 @@ const app = new Vue({
       btnpressed_s1: false,
       btnpressed_s2: false,
       btnpressed_s3: false,
-      max: 100,
-      valuebar: 10
+      //progress bar key-value pairs
+      maxbar: 100,
+      valuebar: 0
+
+
   },
 
   computed: {
@@ -231,6 +234,33 @@ const app = new Vue({
     istudyhere3() {
       this.noend_s3 = !this.noend_s3;
     },
+    //Input & Progress Bar Tracking with vue-focus
+    // just had to pull in a vue-focus event other than vue and jQuery
+    //<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-focus/2.1.0/vue-focus.js"></script>
+    checkCompleted: function() {
+      // find all inputs
+      var totalInputs = $('input').length;
+
+      var filledInputs = 0;
+      $('input').each(function() {
+        // has a value
+        if ((this.value)) {
+          filledInputs++;
+        }
+      });
+
+      // do the math
+      var find = filledInputs / totalInputs * 100;
+
+      // update local variable in Vue data
+      this.valuebar = Math.round(find);
+    },
+
+  ready: function() {
+    // check for any existing values on page load, set accordingly
+    this.checkCompleted();
+  },  
+
 /*     progressivo: function() {
        if (this.name = true && this.email = true) {
          return
