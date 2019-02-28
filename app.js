@@ -239,16 +239,15 @@ const app = new Vue({
     //<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-focus/2.1.0/vue-focus.js"></script>
     checkCompleted: function() {
       // find all inputs
-      var totalInputs = $('input').length;
+      var totalInputs =  $('input.onProgressbar').length;
 
       var filledInputs = 0;
-      $('input').each(function() {
+      $('input.onProgressbar').each(function() {
         // has a value
         if ((this.value)) {
           filledInputs++;
         }
       });
-
       // do the math
       var find = filledInputs / totalInputs * 100;
 
@@ -256,10 +255,10 @@ const app = new Vue({
       this.valuebar = Math.round(find);
     },
 
-  ready: function() {
-    // check for any existing values on page load, set accordingly
-    this.checkCompleted();
-  },  
+    ready: function() {
+      // check for any existing values on page load, set accordingly
+      this.checkCompleted();
+    },
 
 /*     progressivo: function() {
        if (this.name = true && this.email = true) {

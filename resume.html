@@ -24,99 +24,70 @@
     <div class="container-fluid" id="resumeheader">
       <div class="row">
 
-          <div class="col-3" id="BrandCol">
+          <div class="col" id="brandcol">
                 <a class="navbar-brand" href="index.html">
                   <img src="assets/media/nayaca-white-logo.png" alt="Nayaca" id="brandimage">
                 </a>
           </div>
 
-          <div class="col-6">
-                <b-progress class="mb-3" show-value  animated min-width id="progress" >
-                  <b-progress-bar :max="maxbar" :value="valuebar"  id="progressive" />{{ valuebar }}%
+          <div class="col offset-5" id="SignUpCol">
+                <b-button type="button" class="btn" size="sm" id="signupbutton" href="#"><span>Sign Up</span></b-button>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-10 offset-1">
+                <b-progress class="mb-3" animated min-width id="progress" >
+                  <b-progress-bar :max="maxbar" :value="valuebar" show-progress id="progressive" :label="valuebar + '%'"></b-progress-bar>
                 </b-progress>
           </div>
 
-          <div class="col-3" id="SignUpCol">
-                <b-button type="button" class="btn" size="sm" id="signupbutton"href="#"><nobr>Sign Up</nobr></b-button>
-          </div>
     </div>
+
   </div>
 
     <div class="container" id="resumebuilder">
-      <div class="row">
+      <div>
         <div class="col-md-4">
           <b-form>
-            <b-form-group>
+            <b-form-group id="about_box">
               <b-button href="#" v-b-toggle.accordion1 class="btn btn-sm btn-block" variant="outline-dark" id="btnabout">ABOUT</b-button>
-              <b-collapse id="accordion1" accordion="my-accordion" role="tabpanel">
-              <div id="about_box">
-                <br>
-                <b-form-input type="text" id="name" placeholder="My name" v-model="name" @focus="checkCompleted" required >
-                </b-form-input>
-                <br>
-                <b-form-input type="text" id="current_position" placeholder="My current position" v-model="current_position"  @focus="checkCompleted" required >
-                </b-form-input>
-                <br>
-                <b-form-input type="text" id="current_company" placeholder="My current company" v-model="current_company" @focus="checkCompleted" required />
-                </b-form-input>
-                <br>
-                <b-form-input type="text" id="current_location"  placeholder="My current location" v-model="current_location" @focus="checkCompleted" required />
-                </b-form-input>
-                <br>
-                <b-form-input type="text" id="degree" placeholder="My degree" v-model="degree" @focus="checkCompleted" required />
-                </b-form-input>
-              </div>
+              <b-collapse id="accordion1" accordion="my-accordion" role="tabpanel"><br>
+                <b-form-input type="text" id="name" placeholder="My name" v-model="name" class="onProgressbar" @focus="checkCompleted" ></b-form-input><br>
+                <b-form-input type="text" id="current_position" placeholder="My current position" v-model="current_position" ></b-form-input><br>
+                <b-form-input type="text" id="current_company" placeholder="My current company" v-model="current_company" ></b-form-input><br>
+                <b-form-input type="text" id="current_location" placeholder="My current location" v-model="current_location" ></b-form-input><br>
+                <b-form-input type="text" id="degree" placeholder="My degree" v-model="degree" ></b-form-input>
+              </b-collapse>
             </b-form-group>
 
-
-            <div class="form-group">
+            <b-form-group id="skills_box">
               <b-button href="#" v-b-toggle.accordion2 class="btn btn-sm btn-block" variant="outline-dark" id="btnskills">SKILLS</b-button>
-              <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
-              <div id="skills_box">
-                <br>
-                <input type="text" value="languages" class="form-control" placeholder="My languages" v-model="languages" >
-                <br>
-                <input type="text" value="coding" class="form-control" placeholder="My programming skills" v-model="coding" >
-                <br>
-                <input type="text" value="accomplishment" class="form-control" placeholder="My greatest accomplishment" v-model="accomplishment">
-                <br>
-                <textarea type="text" value="about_me" class="form-control" rows="3" placeholder="About me" v-model="about_me" ></textarea>
-                <br>
-                <input type="text" value="salary" class="form-control" placeholder="My salary expectations" v-model="salary" >
+              <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel"><br>
+                <b-form-input type="text" id="languages" placeholder="My languages" v-model="languages" class="onProgressbar" @focus="checkCompleted" ></b-form-input><br>
+                <b-form-input type="text" id="coding" placeholder="My programming skills" v-model="coding" ></b-form-input><br>
+                <b-form-input type="text" id="accomplishment" placeholder="My greatest accomplishment" v-model="accomplishment"></b-form-input><br>
+                <b-form-textarea type="text" id="about_me" rows="3" placeholder="About me" v-model="about_me" ></b-form-textarea><br>
+                <b-form-input type="text" id="salary" placeholder="My salary expectations" v-model="salary" ></b-form-input>
+              </b-collapse>
+            </b-form-group>
 
-              </div>
-            </div>
-
-            <div class="form-group">
+            <b-form-group id="contact_box">
               <b-button href="#" v-b-toggle.accordion3 class="btn btn-sm btn-block" variant="outline-dark" id="btncontact" >CONTACT</b-button>
-              <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
-              <div id="contact_box">
-                <br>
-                <input type="text" value="email" class="form-control" placeholder="My email" v-model="email">
-                <br>
-                <input type="text" value="phone" class="form-control" placeholder="My phone number" v-model="phone">
-                <br>
-                <input type="text" value="website" class="form-control" placeholder="My website" v-model="website">
-                <br>
-                <input type="text" value="linkedIn" class="form-control" placeholder="My linkedIn account" v-model="linkedIn">
-                <br>
-                <input type="text" value="address" class="form-control" placeholder="My address" v-model="address">
-                <br>
-                <input type="text" value="video" class="form-control" placeholder="My application video" v-model="video">
-              </div>
-            </b-collapse>
-            </div>
+              <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel"><br>
+                <b-form-input type="text" id="email"  placeholder="My email" v-model="email" class="onProgressbar" @focus="checkCompleted"></b-form-input><br>
+                <b-form-input type="text" id="phone"  placeholder="My phone number" v-model="phone"></b-form-input><br>
+                <b-form-input type="text" id="website"  placeholder="My website" v-model="website"></b-form-input><br>
+                <b-form-input type="text" id="linkedIn"  placeholder="My linkedIn account" v-model="linkedIn"></b-form-input><br>
+                <b-form-input type="text" id="address"  placeholder="My address" v-model="address"></b-form-input><br>
+                <b-form-input type="text" id="video" placeholder="My application video" v-model="video"></b-form-input>
+              </b-collapse>
+            </b-form-group>
 
-
-            <div class="form-group">
+            <b-form-group id="application_box">
               <b-button href="#" v-b-toggle.accordion4 class="btn btn-sm btn-block" variant="outline-dark" id="btnapplication">APPLICATION</b-button>
-              <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel">
-              <div id="application_box">
-                <br>
-                <input type="text" value="desired_position" class="form-control" placeholder="Desired position" v-model="desired_position">
-              </div>
-            </b-collapse>
-            </div>
+              <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel"><br>
+                <b-form-input type="text" id="desired_position" placeholder="Desired position" v-model="desired_position" class="onProgressbar" @focus="checkCompleted"></b-form-input>
+              </b-collapse>
+            </b-form-group>
 
 
             <div class="form-group">
@@ -137,7 +108,7 @@
                 <br>
                 <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed1" variant="outline-secondary" @click="iworkhere1">I currently work here</b-button>
                 <br>
-                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks1"></textarea>
+                <textarea value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks1"></textarea>
               </div>
               <hr class="hr">
               <div id="experience_box2">
@@ -152,9 +123,9 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate2">
                 <br>
-                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed2" variant="outline-secondary" variant="outline-success" @click="iworkhere2">I currently work here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed2" variant="outline-success" @click="iworkhere2">I currently work here</b-button>
                 <br>
-                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks2"></textarea>
+                <textarea value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks2"></textarea>
               </div>
               <hr class="hr">
               <div id="experience_box3">
@@ -169,9 +140,9 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate3">
                 <br>
-                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed3" variant="outline-secondary" variant="outline-success" @click="iworkhere3">I currently work here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed3" variant="outline-secondary" @click="iworkhere3">I currently work here</b-button>
                 <br>
-                <textarea type="text" value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks3"></textarea>
+                <textarea  value="tasks" class="form-control" rows="3" placeholder="My tasks" v-model="tasks3"></textarea>
               </div>
             </b-collapse>
             </div>
@@ -192,9 +163,9 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s1">
                 <br>
-                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s1" variant="outline-secondary" variant="outline-success" @click="istudyhere1">I currently study here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s1" variant="outline-secondary" @click="istudyhere1">I currently study here</b-button>
                 <br>
-                <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s1"></textarea>
+                <textarea value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s1"></textarea>
               </div>
               <hr class="hr">
               <div id="education_box2">
@@ -209,9 +180,9 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s2">
                 <br>
-                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s2" variant="outline-secondary" variant="outline-success" @click="istudyhere2">I currently study here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s2" variant="outline-secondary" @click="istudyhere2">I currently study here</b-button>
                 <br>
-                <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s2"></textarea>
+                <textarea value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s2"></textarea>
               </div>
               <hr class="hr">
               <div id="education_box3">
@@ -226,52 +197,14 @@
                 <br>
                 <input type="text" value="end" class="form-control" placeholder="End MM.YYYY" v-model="enddate_s3">
                 <br>
-                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s3" variant="outline-secondary" variant="outline-success" @click="istudyhere3">I currently study here</b-button>
+                <b-button class="btn btn-sm btn-block" :pressed.sync="btnpressed_s3" variant="outline-secondary"  @click="istudyhere3">I currently study here</b-button>
                 <br>
-                <textarea type="text" value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s3"></textarea>
+                <textarea value="achievements" class="form-control" rows="5" placeholder="My achievements" v-model="achievements_s3"></textarea>
               </div>
             </b-collapse>
             </div>
-
-            <br>
           </b-form>
         </div>
-
-<!-- Bootstrap example classes from here
-
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </form>
-
-Bootstrap example classes till here -->
-
 
       <div class="col-md-8">
 
@@ -280,105 +213,105 @@ Bootstrap example classes till here -->
           <!--<h6>{{ currently }}</h6>-->
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/position.png" height="19px" v-if="current_position">
+            <img src="./assets/media/icons/position.png" height="19" v-if="current_position">
             <h6>&nbsp;&nbsp;&nbsp;{{ current_position }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/company.png" height="19px" v-if="current_company">
+            <img src="./assets/media/icons/company.png" height="19" v-if="current_company">
             <h6>&nbsp;&nbsp;&nbsp;{{ current_company }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/location.png" height="19px" v-if="current_location">
+            <img src="./assets/media/icons/location.png" height="19" v-if="current_location">
             <h6>&nbsp;&nbsp;&nbsp;{{ current_location }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/degree.png" height="19px" v-if="degree">
+            <img src="./assets/media/icons/degree.png" height="19" v-if="degree">
             <h6>&nbsp;&nbsp;&nbsp;{{ degree }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/languages.png" height="19px" v-if="languages">
+            <img src="./assets/media/icons/languages.png" height="19" v-if="languages">
             <h6>&nbsp;&nbsp;&nbsp;{{ languages }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/coding.png" height="19px" v-if="coding">
+            <img src="./assets/media/icons/coding.png" height="19" v-if="coding">
             <h6>&nbsp;&nbsp;&nbsp;{{ coding }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/accomplishment.png" height="19px" v-if="accomplishment">
+            <img src="./assets/media/icons/accomplishment.png" height="19" v-if="accomplishment">
             <h6>&nbsp;&nbsp;&nbsp;{{ accomplishment }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/about.png" height="19px" v-if="about_me">
+            <img src="./assets/media/icons/about.png" height="19" v-if="about_me">
             <h6>&nbsp;&nbsp;&nbsp;{{ about_me }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/salary.png" height="19px" v-if="salary">
+            <img src="./assets/media/icons/salary.png" height="19" v-if="salary">
             <h6>&nbsp;&nbsp;&nbsp;{{ salary }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/email.png" height="19px" v-if="email">
+            <img src="./assets/media/icons/email.png" height="19" v-if="email">
             <h6>&nbsp;&nbsp;&nbsp;{{ email }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/phone.png" height="19px" v-if="phone">
+            <img src="./assets/media/icons/phone.png" height="19" v-if="phone">
             <h6>&nbsp;&nbsp;&nbsp;{{ phone }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/website.png" height="19px" v-if="website">
+            <img src="./assets/media/icons/website.png" height="19" v-if="website">
             <h6>&nbsp;&nbsp;&nbsp;{{ website }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/linkedin.png" height="19px" v-if="linkedIn">
+            <img src="./assets/media/icons/linkedin.png" height="19" v-if="linkedIn">
             <h6>&nbsp;&nbsp;&nbsp;{{ linkedIn }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/address.png" height="19px" v-if="address">
+            <img src="./assets/media/icons/address.png" height="19" v-if="address">
             <h6>&nbsp;&nbsp;&nbsp;{{ address }}</h6>
           </span>
           </div>
 
           <div>
           <span class="inliner">
-            <img src="./assets/media/icons/video.png" height="19px" v-if="video">
+            <img src="./assets/media/icons/video.png" height="19" v-if="video">
             <h6>&nbsp;&nbsp;&nbsp;{{ video }}</h6>
           </span>
           </div>
@@ -387,7 +320,7 @@ Bootstrap example classes till here -->
 
           <div id="WHYME">
           <span class="inliner">
-            <img src="./assets/media/icons/application_black.png" height="24px" v-if="desired_position">
+            <img src="./assets/media/icons/application_black.png" height="24" v-if="desired_position">
             <h6>&nbsp;&nbsp;&nbsp;{{ desired_position }}</h6>
           </span>
           </div>
@@ -409,28 +342,28 @@ Bootstrap example classes till here -->
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/company_black.png" height="19px" v-if="company1">
+                      <img src="./assets/media/icons/company_black.png" height="19" v-if="company1">
                       <h6>&nbsp;{{ company1 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location1">
+                      <img src="./assets/media/icons/location_black.png" height="19" v-if="location1">
                       <h6>&nbsp;{{ location1 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate1 || enddate1 || noend1">
+                      <img src="./assets/media/icons/calendar_black.png" height="19" v-if="startdate1 || enddate1 || noend1">
                       <h6>&nbsp;{{ period1 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/tasks_black.png" height="19px" v-if="tasks1">
+                      <img src="./assets/media/icons/tasks_black.png" height="19" v-if="tasks1">
                       <h6>&nbsp;{{ tasks1 }}</h6>
                     </span>
                   </div>
@@ -443,28 +376,28 @@ Bootstrap example classes till here -->
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/company_black.png" height="19px" v-if="company2">
+                      <img src="./assets/media/icons/company_black.png" height="19" v-if="company2">
                       <h6>&nbsp;{{ company2 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location2">
+                      <img src="./assets/media/icons/location_black.png" height="19" v-if="location2">
                       <h6>&nbsp;{{ location2 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate2 || enddate2 || noend2">
+                      <img src="./assets/media/icons/calendar_black.png" height="19" v-if="startdate2 || enddate2 || noend2">
                       <h6>&nbsp;{{ period2 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/tasks_black.png" height="19px" v-if="tasks2">
+                      <img src="./assets/media/icons/tasks_black.png" height="19" v-if="tasks2">
                       <h6>&nbsp;{{ tasks2 }}</h6>
                     </span>
                   </div>
@@ -477,28 +410,28 @@ Bootstrap example classes till here -->
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/company_black.png" height="19px" v-if="company3">
+                      <img src="./assets/media/icons/company_black.png" height="19" v-if="company3">
                       <h6>&nbsp;{{ company3 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location3">
+                      <img src="./assets/media/icons/location_black.png" height="19" v-if="location3">
                       <h6>&nbsp;{{ location3 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate3 || enddate3 || noend3">
+                      <img src="./assets/media/icons/calendar_black.png" height="19" v-if="startdate3 || enddate3 || noend3">
                       <h6>&nbsp;{{ period3 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/tasks_black.png" height="19px" v-if="tasks3">
+                      <img src="./assets/media/icons/tasks_black.png" height="19" v-if="tasks3">
                       <h6>&nbsp;{{ tasks3 }}</h6>
                     </span>
                   </div>
@@ -522,28 +455,28 @@ Bootstrap example classes till here -->
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/institution.png" height="19px" v-if="institution_s1">
+                      <img src="./assets/media/icons/institution.png" height="19" v-if="institution_s1">
                       <h6>&nbsp;{{ institution_s1 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location_s1">
+                      <img src="./assets/media/icons/location_black.png" height="19" v-if="location_s1">
                       <h6>&nbsp;{{ location_s1 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate_s1 || enddate_s1 || noend_s1">
+                      <img src="./assets/media/icons/calendar_black.png" height="19" v-if="startdate_s1 || enddate_s1 || noend_s1">
                       <h6>&nbsp;{{ period_s1 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/achievements.png" height="19px" v-if="achievements_s1">
+                      <img src="./assets/media/icons/achievements.png" height="19" v-if="achievements_s1">
                       <h6>&nbsp;{{ achievements_s1 }}</h6>
                     </span>
                   </div>
@@ -556,28 +489,28 @@ Bootstrap example classes till here -->
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/institution.png" height="19px" v-if="institution_s2">
+                      <img src="./assets/media/icons/institution.png" height="19" v-if="institution_s2">
                       <h6>&nbsp;{{ institution_s2 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location_s2">
+                      <img src="./assets/media/icons/location_black.png" height="19" v-if="location_s2">
                       <h6>&nbsp;{{ location_s2 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate_s2 || enddate_s2 || noend_s2">
+                      <img src="./assets/media/icons/calendar_black.png" height="19" v-if="startdate_s2 || enddate_s2 || noend_s2">
                       <h6>&nbsp;{{ period_s2 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/achievements.png" height="19px" v-if="achievements_s2">
+                      <img src="./assets/media/icons/achievements.png" height="19" v-if="achievements_s2">
                       <h6>&nbsp;{{ achievements_s2 }}</h6>
                     </span>
                   </div>
@@ -590,28 +523,28 @@ Bootstrap example classes till here -->
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/institution.png" height="19px" v-if="institution_s3">
+                      <img src="./assets/media/icons/institution.png" height="19" v-if="institution_s3">
                       <h6>&nbsp;{{ institution_s3 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/location_black.png" height="19px" v-if="location_s3">
+                      <img src="./assets/media/icons/location_black.png" height="19" v-if="location_s3">
                       <h6>&nbsp;{{ location_s3 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/calendar_black.png" height="19px" v-if="startdate_s3 || enddate_s3 || noend_s3">
+                      <img src="./assets/media/icons/calendar_black.png" height="19" v-if="startdate_s3 || enddate_s3 || noend_s3">
                       <h6>&nbsp;{{ period_s3 }}</h6>
                     </span>
                   </div>
 
                   <div>
                     <span class="inliner">
-                      <img src="./assets/media/icons/achievements.png" height="19px" v-if="achievements_s3">
+                      <img src="./assets/media/icons/achievements.png" height="19" v-if="achievements_s3">
                       <h6>&nbsp;{{ achievements_s3 }}</h6>
                     </span>
                   </div>
@@ -640,86 +573,18 @@ Bootstrap example classes till here -->
             new positions in the blink of an eye. If you are already a registered user, click the 'Sign Up' button to sign in.</p>
         </div>
       </div>
-
-      </div>
     </div>
 
-<!-- start: jsPDF https://parall.ax/products/jspdf -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
-<script src="/script.js"></script>
-<!-- Vue-focus: A reusable focus directive for reusable Vue.js components. JQuery for the use of "$" -->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdn.rawgit.com/simplesmiler/vue-focus/0.1.2/dist/vue-focus.js"></script>
+          <!-- start: jsPDF https://parall.ax/products/jspdf -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
-</div>
+          <!-- Vue-focus: A reusable focus directive for reusable Vue.js components. JQuery for the use of "$" -->
+          <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-focus/2.1.0/vue-focus.js"></script>
+
+
+
   </body>
 </html>
-
-<!--
-
-<input type="text" value="name" placeholder="MY NAME" v-model="name" />
-<input type="text" value="current_position" placeholder="MY CURRENT POSITION" v-model="current_position" />
-<input type="text" value="current_company" placeholder="MY CURRENT COMPANY" v-model="current_company" />
-<input type="text" value="current_location" placeholder="MY CURRENT LOCATION" v-model="current_location" />
-<input type="text" value="about_me" placeholder="ABOUT ME" v-model="about_me" />
-
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="navbar navbar-expand-sm navbar-light bg-transparent" id="resumenav">
-          <a class="navbar-brand" href="index.html"><img src="assets/media/nayaca-pantone-logo.png" alt="Nayaca"></a>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sections</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#"><img src="assets/media/usa-logo.png" height="16" width="35" alt="Usa flag">English</a>
-                  <a class="dropdown-item" href="#"><img src="assets/media/germany-logo.png" height="16" width="35" alt="Germany flag">Deutsch</a>
-                  <a class="dropdown-item" href="#"><img src="assets/media/mexico-logo.png" height="16" width="35" alt="Mexico flag">Español</a>
-                </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div id="app">
-      <label for="firstname">First name</label>
-      <input type="text" value="firstname" placeholder="First name" v-model="firstname" />
-      <label for="lastname">Last name</label>
-      <input type="text" value="lastname" placeholder="Last name" v-model="lastname" />
-      <h2>{{ firstname }} {{ lastname }}</h2>
-    </div>
-
-     <div class="container">
-
-        <div class="resume-name"><span><h2>{{person.name}}</h2></span>
-        </div>
-        <div class="resume-title">
-          <h4>{{ person.title }}</h4>
-        </div>
-        <div class="resume-company">
-          <h4>{{ person.company }}</h4>
-        </div>
-      </div>
-
-
-
-    <div class="container">
-      <div class="row">
-        <iframe src="" width="" height=""></iframe>">
-        <form action="/action_page.json" method="post" target="_blank">
-          <input type="text" name="fname" placeholder="First name">
-          <input type="text" name="lname" placeholder="Last name"><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-    </div>
- -->

@@ -1,4 +1,4 @@
-
+/* Pantone Color set applied to buttons */
   #signupbutton, #btnskills, #btnabout, #btncontact, #btnapplication, #btnexperience, #btneducation  {
     background-color: #fff;
     color: #FF6F61;
@@ -17,21 +17,32 @@
     border-color: #FF6F61;
     box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.5);
     }
-
+/* header content */
 #resumeheader {
       background: linear-gradient(90deg, #FF6F61, #fff);
+
+    }
+.container-fluid {
+      margin: 0;
+      height: 70px;
+      position: fixed;
+      background: white;
+      z-index: 10;
     }
 
+#brandcol {
+  margin-left: 0;
+      }
 #brandimage {
-    width: 100px;
-    height: 100px;
-  }
+        width: 50px;
+        height: 50px;
+      }
 
 #progress {
     padding: 0;
-    margin-top: 70px;
-    height: 12px;
-    font-size: 8px;
+    margin-top: 0px;
+    height: 10px;
+    font-size: 0.5em;
     font-weight: bold;
   }
 
@@ -39,90 +50,31 @@
     width: 0%;
     color: white;
     background-color: #292A2D;
+
   }
 
 #SignUpCol {
-  text-align: right;
+  padding-left: 20px;
+  padding-right: 0;
+  margin-top: 2px;
 }
 
 #signupbutton {
-  margin-top: 57px;
+  font-size: 0.6rem;
+  margin-top: 17px;
   }
 
-.container-fluid {
-  padding: 10px;
-  margin: 0;
-  height: 120px;
-  position: fixed;
-  background: white;
-  z-index: 10;
-}
-
-
-
+/* Input user form area */
 
 #resumebuilder {
-  padding-top: 120px;
+  padding-top: 70px;
 }
-
-.form-control {
-  line-height: 1.5;
-}
-
-@media only screen and (max-width: 768px) {
-  .container-fluid {
-    height: 70px;
-  }
-
-  #brandimage {
-    width: 50px;
-    height: 50px;
-  }
-  #progress {
-    height: 10px;
-    margin-top: 35px;
-    font-size: 0.5em;
-  }
-  #signupbutton {
-    margin-top: 15px;
-    margin-left: -11px;
-  }
-  #resumebuilder {
-    padding-top: 70px;
-  }
-}
-
-
-body {
-  font-family: 'Lato', sans-serif;
-  color: black; // different from main.css
-  opacity: 1;
-  font-weight: bold;
-}
-
-h7 {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.jumbotron {
-    border-radius: 0 !important;
-    margin-bottom: 0;
-}
-
-/*
-.col-md-8 {
-  box-shadow: 0 0 0.1cm;
-  padding: 5em;
-} */
 
 .col-md-4 {
   padding: 2em;
 }
 
-.col-md-4 h6 {
-  font-weight: bold;
-}
+/* Resume preview area */
 
 #resumepage {
   letter-spacing: 0.1em;
@@ -131,6 +83,10 @@ h7 {
   padding: 5em;
   min-height: 500px;
   background: white;
+}
+
+.col-md-4 h6 {
+  font-weight: bold;
 }
 
 .hr {
@@ -160,19 +116,13 @@ h7 {
   font-weight: bold;
   text-align: center;
   margin-bottom: 1em;
+  letter-spacing: 0.1em;
 }
 
 #resumepage h6 {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 0.5em;
-}
-
-#WHYME {
-  font-size: 1.25em;
-  color: #FF6F61;
-  font-weight: bold;
-  text-align: center;
 }
 
 #experience_headline, #education_headline {
@@ -220,233 +170,6 @@ h7 {
 
 .inliner {
   display: inline-flex;
-}
-
-.pantone-headline {
-  color: #FF6F61;
-}
-
-#AboutNavLink, #navlink_2, #navlink_3 {
-  color: black;
-}
-
-
-#main{
-  max-width: 100%;
-  background: -webkit-gradient(linear, left center, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))),
-  url('https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Fchelsea-london-phillips-779135-unsplash.jpg?1544697182195') no-repeat;
-  /*background-image: url("https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Fchelsea-london-phillips-779135-unsplash.jpg?1544697182195");*/
-  background-size: cover;
-  background-position: 0% 40%;
-  display: block;
-  background-repeat: no-repeat;
-  color: white;
-}
-
-#blog {
-  max-width: 100%;
-  min-height: 800px;
-  background-image: url("https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Frobert-bye-319816-unsplash%20(1).jpg?1545734215201");
-  background-size: cover;
-  background-position: 0% 15%;
-  display: block;
-  background-repeat: no-repeat;
-  color: white;
-}
-
-.navbar {
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-#navmain {
-    position: fixed;
-    z-index: 5;
-}
-
-.bg-white {
-  background-color: white;
-  display: cover;
-}
-
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("https://cdn.glitch.com/89557d53-bdf9-42eb-adfc-ed86e46978c4%2Fbaseline_menu_white_18dp.png?1544872354817");
-}
-
-.paypal-invert {
-  filter: invert(100%);
-  z-index: 20;
-}
-
-
-.navbar-expand-sm .nav-item a {
-  padding-top: 48px;
-}
-
-
-
-  .headline h7 {
-    font-size: 80px;
-  }
-
-
-.navbar-toggler, .navbar-toggler:hover, .navbar-toggler:active {
-  border: none;
-  padding: 0;
-  margin: 0;
-  outline: none !important;
-  margin-top: 40px;
-}
-
-.nav-item .dropdown-item {
-  color: #FF6F61 !important;
-  padding-top: 0px !important;
-}
-
-.nav-item .dropdown-item img {
-  color: #FF6F61 !important;
-  padding-right: 10px;
-}
-
-.dropdown-menu a {
-  width: 50%;
-  padding-right: 10px;
-  justify-content: flex-end;
-}
-
-h7 {
-  font-size: 100px;
-  letter-spacing: 0.1em;
-}
-
-h1 {
-  letter-spacing: 0.1em;
-  font-weight: bold;
-}
-
-h4 {
-  letter-spacing: 0.1em;
-}
-
-#mainheadline {
-  padding-top: 300px;
-/*  padding-bottom: 200px; */
-  text-align: center;
-  text-shadow: 2px 2px black;
-}
-
-
-/* @media (min-width: 575.99px) { #nayacatext{display: none;} }
-@media (max-width: 575.98px) {
-#mainheadline {
-  font-size: 5em;
-  padding-top: 100px;
-  line-height: 1;
-} */
-
-#nayacatext{display: inline-block; text-transform: uppercase;}
-#nayacalogo{display: none;}
-}
-
-#blogheadline {
-  padding-top: 400px;
-  text-align: center;
-  text-shadow: 2px 2px black;
-}
-
-.efs {
-  margin-top: -top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  letter-spacing: 0.1em;
-  word-spacing: 0.25rem;
-  line-height: 1.5;
-  font-weight: bold;
-  color: white;
-}
-
-
-.flex-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn-lg span img {
-  padding-right: 10px;
-}
-
-#resumes {
-  padding-top: 50px;
-  margin-top: -50px;
-  color: white;
-  text-align: center;
-}
-
-/* #resume-image {
-  margin-top: 50px;
-  margin-bottom: 50px;
-} */
-
-.resumes h4 {
-  padding: 20px 0px;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-}
-
-.resumes h5 {
-  padding-bottom: 20px;;
-  text-align: center;
-  color: black;
-  letter-spacing: 0.1em;
-}
-
-.resumes h3 {
-  margin: 20px 0px 10px 0px;;
-  text-align: center;
-  color: black;
-}
-
-
-.col .footer {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.footer {
-  background-color: black;
-  margin-top: 0;
-  text-align: center;
-}
-
-.footerbox {
-  margin: auto auto 10px auto;
-}
-
-.footer p {
-  line-height: normal;
-  font-weight: normal;
-  font-size: 10px;
-  margin: 0;
-  padding: 0;
-}
-
-.footer a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer img {
-  text-align: center;
-}
-
-/* #genresume { background-color: #5fff2b !important; } */
-
-#resumenav {
-  color: black;
 }
 
 @media print {
